@@ -7,7 +7,7 @@ function Footer() {
               <div className="mb-4 md:mb-0">
                 <a href="/">
                   <img
-                    src="AceCycleLogo.png"
+                    src="/AceCycleLogo.png"
                     alt="Logo"
                     className="h-16 w-18"
                   />
@@ -21,13 +21,13 @@ function Footer() {
                   Home
                 </a>
                 <a
-                  href="/about"
+                  href="/about/"
                   className="text-gray-900 transition-all hover:text-gray-500"
                 >
                   About
                 </a>
                 <a
-                  href="/contact"
+                  href="/contact/"
                   className="text-gray-900 transition-all hover:text-gray-500"
                 >
                   Contact

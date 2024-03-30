@@ -110,7 +110,7 @@ export const Header = () => {
       <Button className="max-w-2xl text-lg md:text-xl mt-8 py-6 px-6 dark:text-neutral-200">
             <a
             className="inline-flex h-9 w-max items-center justify-center rounded-md"
-            href="/about"
+            href="/about/"
             >
                 Learn More
             </a>
