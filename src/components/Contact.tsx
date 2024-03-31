@@ -16,6 +16,8 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { useToast } from "./ui/use-toast";
+import { Toaster } from "./ui/toaster";
 
 const formSchema = z.object({
   name: z.string().min(1, {
@@ -30,6 +32,7 @@ const formSchema = z.object({
 })
 
 function Contact() {
+  const { toast } = useToast();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -44,6 +47,10 @@ function Contact() {
     const publicKey = '-021-25NyMpIQSKaa';
     emailjs.send(serviceId, templateId, values, publicKey).then(() => {
       form.reset();
+      toast({
+        title: "Email sent!",
+        description: "Your message has been successfully sent.",
+      });
     });
   }
   return (
@@ -99,6 +106,7 @@ function Contact() {
       </form>
     </Form>
     </div>
+    <Toaster />
     </>
   )
 }
