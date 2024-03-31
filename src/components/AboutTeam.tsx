@@ -8,7 +8,7 @@ function AboutTeam() {
         <div className="flex flex-col justify-center items-center h-full w-full my-10">
             <h1 className="text-gray-800 md:text-7xl text-6xl font-extrabold text-center">Our Team</h1>
             <p className="opacity-80 text-gray-700 md:text-lg text-center">Jordan High School | Seven Lakes High School</p>
-            <div className="flex flex-col md:flex-row flex-wrap gap-10 items-center justify-center m-10">
+            <div className="flex flex-row flex-wrap gap-10 items-center justify-center m-10">
                 {team.map((item, index) => (
                   <a href={item.linkedin}
                   target="_blank" 

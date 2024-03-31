@@ -88,7 +88,7 @@ export const DirectionAwareHover = ({
             <img
               alt="image"
               className={cn(
-                "h-full w-full object-cover scale-[1.15] brightness-[0.6] md:brightness-100",
+                "h-full w-full object-cover scale-[1.15] brightness-[0.6] lg:brightness-100",
                 imageClassName
               )}
               width="1000"
@@ -103,14 +103,14 @@ export const DirectionAwareHover = ({
               ease: "easeOut",
             }}
             className={cn(
-              "text-white absolute bottom-4 left-4 z-40 hidden md:block",
+              "text-white absolute bottom-4 left-4 z-40 hidden lg:block",
               childrenClassName
             )}
           >
             {children}
           </motion.div>
           <div className={cn(
-              "text-white absolute bottom-4 left-4 z-40 block md:hidden",
+              "text-white absolute bottom-4 left-4 z-40 block lg:hidden",
               childrenClassName
             )}>
             {children}
