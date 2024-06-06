@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 function RecycledCount() {
-  const [count, setCount] = useState(9700);
+  const [count, setCount] = useState(69600);
   const { ref, inView } = useInView(); 
 
   useEffect(() => {
@@ -11,9 +11,9 @@ function RecycledCount() {
     if (inView) {
       interval = setInterval(() => {
         setCount((prevCount) => {
-          if (prevCount >= 10394) {
+          if (prevCount >= 70352) {
             clearInterval(interval);
-            return 10394;
+            return 70352;
           }
           return prevCount + 1;
         });

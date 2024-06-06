@@ -1,7 +1,7 @@
 [
     {
         "name": "Eric Chen | Katy",
-        "position": "Chief Technology Officer | Head of Katy",
+        "position": "Chief Technology Officer | President of Katy",
         "linkedin": "https://linkedin.com/in/echen890",
         "image": "https://acecycleassets.vercel.app/Eric.jpeg"
     },
@@ -25,19 +25,19 @@
     },
     {
         "name": "Sibi Raja | Austin",
-        "position": "Head of Austin",
+        "position": "President of Austin",
         "linkedin": "https://app.utrsports.net/profiles/293893",
         "image": "https://acecycleassets.vercel.app/Sibi.jpeg"
     },
     {
         "name": "Pratik Sahajani | Sugar Land",
-        "position": "Head of Sugar Land",
+        "position": "President of Sugar Land",
         "linkedin": "https://app.utrsports.net/profiles/874167",
         "image": "https://acecycleassets.vercel.app/Pratik.jpeg"
     },
     {
         "name": "Gabriel Segubiense | Sugar Land",
-        "position": "Head of Sugar Land",
+        "position": "President of Sugar Land",
         "linkedin": "https://app.utrsports.net/profiles/1335997",
         "image": "https://acecycleassets.vercel.app/Gabriel.jpeg"
     },
@@ -46,5 +46,17 @@
         "position": "Vice President of Katy",
         "linkedin": "https://app.utrsports.net/profiles/981730",
         "image": "https://acecycleassets.vercel.app/Aidan.jpeg"
+    },
+    {
+        "name": "Shreyan Dey | Dallas",
+        "position": "President of Dallas",
+        "linkedin": "https://app.utrsports.net/profiles/821728",
+        "image": "https://acecycleassets.vercel.app/Shreyan.jpeg"
+    },
+    {
+        "name": "Adhwaith Mahadev | Atlanta",
+        "position": "President of Atlanta",
+        "linkedin": "https://app.utrsports.net/",
+        "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
     }
 ]
