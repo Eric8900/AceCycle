@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 function RecycledCount() {
-  const [count, setCount] = useState(69600);
+  const [count, setCount] = useState(101900);
   const { ref, inView } = useInView(); 
 
   useEffect(() => {
