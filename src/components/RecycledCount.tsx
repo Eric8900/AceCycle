@@ -11,9 +11,9 @@ function RecycledCount() {
     if (inView) {
       interval = setInterval(() => {
         setCount((prevCount) => {
-          if (prevCount >= 70352) {
+          if (prevCount >= 102371) {
             clearInterval(interval);
-            return 70352;
+            return 102371;
           }
           return prevCount + 1;
         });
