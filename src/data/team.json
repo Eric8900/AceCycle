@@ -65,5 +65,11 @@
         "position": "President of New York, New Jersey, Connecticut",
         "linkedin": "https://app.utrsports.net/",
         "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+    },
+    {
+        "name": "Laksh Mehta | Chicago",
+        "position": "President of Chicago",
+        "linkedin": "https://app.utrsports.net/",
+        "image": "https://acecycleassets.vercel.app/Laksh.jpeg"
     }
 ]
