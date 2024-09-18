@@ -38,7 +38,7 @@ function RecycledCount() {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.3 }}
-          className="text-9xl font-extrabold bg-emerald-200 px-3 py-3 rounded-2xl"
+          className="text-8xl sm:text-9xl font-extrabold bg-emerald-200 px-3 py-3 rounded-2xl"
         >
           <span className='bg-gradient-to-r from-lime-500 to-lime-600 bg-clip-text text-transparent'>{count}</span>
         </motion.span>

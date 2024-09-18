@@ -10,7 +10,7 @@ export function About() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
       viewport={{ once: true }}
-      className="text-center md:text-8xl text-7xl  text-gray-800 py-36"
+      className="text-center md:text-8xl text-7xl mx-10 text-gray-800 py-36"
     >
       What <b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">we</b> do
     </motion.h1>
