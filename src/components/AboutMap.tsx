@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { Key, useState } from 'react';
 import { ComposableMap, Geographies, Geography, Marker } from "react-simple-maps";
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
@@ -25,7 +25,7 @@ const states = [
 ];
 
 const AboutMap = () => {
-    const [hoveredCity, setHoveredCity] = useState(null);
+    const [hoveredCity, setHoveredCity] = useState("");
 
     return (
         <div className="w-full max-w-5xl mx-auto my-36">
@@ -33,7 +33,7 @@ const AboutMap = () => {
             <ComposableMap projection="geoAlbersUsa">
                 <Geographies geography={geoUrl}>
                     {({ geographies }) =>
-                        geographies.map((geo: { properties: { name: string; }; rsmKey: unknown; }) => {
+                        geographies.map((geo: { properties: { name: string; }; rsmKey: Key; }) => {
                             const cur = states.find(c => c === geo.properties.name);
                             return (
                                 <Geography
@@ -62,9 +62,9 @@ const AboutMap = () => {
                 {cities.map(({ name, coordinates }) => (
                     <Marker
                         key={name}
-                        coordinates={coordinates}
+                        coordinates={[coordinates[0], coordinates[1]]}
                         onMouseEnter={() => setHoveredCity(name)}
-                        onMouseLeave={() => setHoveredCity(null)}
+                        onMouseLeave={() => setHoveredCity("")}
                     >
                         <g>
                             <circle
@@ -87,7 +87,7 @@ const AboutMap = () => {
                 ))}
                 {cities.map(({ name, coordinates }) => (
                     hoveredCity === name && (
-                        <Marker key={`hover-${name}`} coordinates={coordinates}>
+                        <Marker key={`hover-${name}`} coordinates={[coordinates[0], coordinates[1]]}>
                             <g className='hidden sm:block'>
                                 <rect
                                     x="-40"
