@@ -105,7 +105,7 @@ export const Header = () => {
         Welcome to <b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">AceCycle</b>
       </h1>
       <p className="max-w-2xl text-lg md:text-xl mt-8 dark:text-neutral-200">
-        We are a Texas based non-profit, from Katy to Sugar Land to Austin, committed to recycling tennis balls wherever possible.
+        We are a Texas based non-profit, from Katy to Sugar Land to Austin, committed to recycling tennis balls wherever possible all around the nation.
       </p>
       <Button className="max-w-2xl text-lg md:text-xl mt-8 py-6 px-6 dark:text-neutral-200">
             <a
