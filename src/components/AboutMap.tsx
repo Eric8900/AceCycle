@@ -13,7 +13,7 @@ const cities = [
     { name: "Atlanta, GA", coordinates: [-84.1402, 34.2073] },
     { name: "Orlando, FL", coordinates: [-81.3792, 28.5383] },
     { name: "Charlotte, NC", coordinates: [-80.8431, 35.2271] },
-    { name: "Washington, DC", coordinates: [-77.0369, 38.9072] },
+    { name: "Ashburn, VA", coordinates: [-77.0369, 38.9072] },
     { name: "New York, NY", coordinates: [-74.0060, 40.7128] },
     { name: "Newark, NJ", coordinates: [-74.1724, 40.7357] },
     { name: "Hartford, CT", coordinates: [-72.6823, 41.7658] },
@@ -21,7 +21,7 @@ const cities = [
 ];
 
 const states = [
-    "Texas", "Georgia", "Florida", "North Carolina", "New Jersey", "New York", "Connecticut", "Illinois", "District of Columbia"
+    "Texas", "Georgia", "Florida", "North Carolina", "New Jersey", "New York", "Connecticut", "Illinois", "Virginia"
 ];
 
 const AboutMap = () => {
