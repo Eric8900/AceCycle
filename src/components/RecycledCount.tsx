@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 function RecycledCount() {
-  const [count, setCount] = useState(145000);
+  const [count, setCount] = useState(399700);
   const { ref, inView } = useInView(); 
 
   useEffect(() => {
@@ -11,9 +11,9 @@ function RecycledCount() {
     if (inView) {
       interval = setInterval(() => {
         setCount((prevCount) => {
-          if (prevCount >= 145600) {
+          if (prevCount >= 400000) {
             clearInterval(interval);
-            return 145600;
+            return 400000;
           }
           return prevCount + 1;
         });
@@ -40,7 +40,7 @@ function RecycledCount() {
           transition={{ duration: 0.3 }}
           className="text-8xl sm:text-9xl font-extrabold bg-emerald-200 px-3 py-3 rounded-2xl"
         >
-          <span className='bg-gradient-to-r from-lime-500 to-lime-600 bg-clip-text text-transparent'>{count}</span>
+          <span className='bg-gradient-to-r from-lime-500 to-lime-600 bg-clip-text text-transparent'>{count}+</span>
         </motion.span>
       </motion.div>
     </div>
