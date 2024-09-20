@@ -1,26 +1,9 @@
-import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import NumberTicker from './ui/number-ticker';
 
 function RecycledCount() {
-  const [count, setCount] = useState(399700);
   const { ref, inView } = useInView(); 
-
-  useEffect(() => {
-    let interval: string | number | NodeJS.Timeout | undefined;
-    if (inView) {
-      interval = setInterval(() => {
-        setCount((prevCount) => {
-          if (prevCount >= 400000) {
-            clearInterval(interval);
-            return 400000;
-          }
-          return prevCount + 1;
-        });
-      }, 1);
-    }
-    return () => clearInterval(interval); 
-  }, [inView]); 
 
   return (
     <div className="flex justify-center items-center h-screen bg-green-100" ref={ref}> 
@@ -34,13 +17,12 @@ function RecycledCount() {
           Balls Recycled
         </h2>
         <motion.span
-          key={count}
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.3 }}
-          className="text-8xl sm:text-9xl font-extrabold bg-emerald-200 px-3 py-3 rounded-2xl"
+          className="!text-7xl sm:!text-9xl font-extrabold bg-emerald-200 px-3 py-3 rounded-2xl"
         >
-          <span className='bg-gradient-to-r from-lime-500 to-lime-600 bg-clip-text text-transparent'>{count}+</span>
+          <span className='bg-gradient-to-r from-lime-500 to-lime-600 bg-clip-text text-transparent'><NumberTicker value={400000} className='inline bg-gradient-to-r from-lime-500 to-lime-600 bg-clip-text text-transparent'/>+</span>
         </motion.span>
       </motion.div>
     </div>
