@@ -1,15 +1,15 @@
 [
     {
-        "name": "Eric Chen | Katy",
-        "position": "Chief Technology Officer | President of Katy, TX",
-        "linkedin": "https://linkedin.com/in/echen890",
-        "image": "https://acecycleassets.vercel.app/Eric.jpeg"
-    },
-    {
         "name": "Nishant Gadde | Katy",
-        "position": "Co-President",
+        "position": "CEO",
         "linkedin": "https://app.utrsports.net/profiles/2846420",
         "image": "https://acecycleassets.vercel.app/Nishant.jpeg"
+    },
+    {
+        "name": "Eric Chen | Katy",
+        "position": "CTO | President of Katy, TX",
+        "linkedin": "https://linkedin.com/in/echen890",
+        "image": "https://acecycleassets.vercel.app/Eric.jpeg"
     },
     {
         "name": "Allan Xu | Katy",
