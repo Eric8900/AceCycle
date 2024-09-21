@@ -28,10 +28,11 @@ const cities = [
     { name: "Louisville, KY", coordinates: [-85.758493, 38.239403] },
     { name: "St. Louis, MO", coordinates: [-90.200206, 38.616867] },
     { name: "College Park, MD", coordinates: [-76.937764, 38.992729] },
+    { name: "Carmel, IN", coordinates: [-86.122084, 39.974733] },
 ];
 
 const states = [
-    "Texas", "Georgia", "Florida", "North Carolina", "New Jersey", "New York", "Connecticut", "Illinois", "Virginia", "California", "South Carolina", "Kentucky", "Missouri", "Maryland"
+    "Texas", "Georgia", "Florida", "North Carolina", "New Jersey", "New York", "Connecticut", "Illinois", "Virginia", "California", "South Carolina", "Kentucky", "Missouri", "Maryland", "Indiana"
 ];
 
 const AboutMap = () => {
