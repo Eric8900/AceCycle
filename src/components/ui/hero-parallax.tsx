@@ -100,21 +100,22 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="z-10 max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
-      <h1 className="text-3xl md:text-7xl font-bold dark:text-white">
-        Welcome to <b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">AceCycle</b>
+    <div className="flex flex-col z-10 max-w-7xl relative mx-auto py-20 md:py-40 px-4 text-center items-center xl:text-left xl:items-start xl:justify-start w-full left-0 top-0">
+      <h1 className="text-6xl md:text-7xl font-extrabold dark:text-white">
+        Reduce, Reuse, <b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">AceCycle</b>
       </h1>
-      <p className="max-w-2xl text-lg md:text-xl mt-8 dark:text-neutral-200">
-        We are a national non-profit committed to recycling tennis balls nationwide.
+      <p className="max-w-xl text-xl md:text-2xl font-light drop-shadow-2xl my-8 dark:text-neutral-200">
+        We are an international non-profit committed to recycling tennis balls globally.
       </p>
-      <Button className="max-w-2xl text-lg md:text-xl mt-8 py-6 px-6 dark:text-neutral-200">
-            <a
-            className="inline-flex h-9 w-max items-center justify-center rounded-md"
-            href="/about/"
-            >
-                Learn More
-            </a>
-      </Button>
+      <a
+        className="inline-flex h-9 w-max items-center justify-center rounded-md"
+        href="/about/"
+      >
+        <Button className="max-w-2xl rounded-xl text-xl md:text-3xl md:p-8 p-6 dark:text-neutral-200">
+          Learn More
+
+        </Button>
+      </a>
     </div>
   );
 };
