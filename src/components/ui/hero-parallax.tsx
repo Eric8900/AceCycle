@@ -100,7 +100,7 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="flex flex-col z-10 max-w-7xl relative mx-auto py-10 md:py-40 px-4 text-center items-center xl:text-left xl:items-start xl:justify-start w-full left-0 top-0">
+    <div className="flex flex-col z-10 max-w-7xl relative mx-auto py-5 md:py-40 px-4 text-center items-center xl:text-left xl:items-start xl:justify-start w-full left-0 top-0">
       <h1 className="text-6xl md:text-7xl font-extrabold dark:text-white">
         Reduce, Reuse, <b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">AceCycle</b>
       </h1>
