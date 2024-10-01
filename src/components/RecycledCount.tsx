@@ -23,7 +23,7 @@ function RecycledCount() {
           className="!text-7xl sm:!text-9xl font-extrabold bg-emerald-200 px-3 py-3 rounded-2xl"
         >
           <span className='bg-gradient-to-r from-lime-500 to-lime-600 bg-clip-text text-transparent'>
-            <NumberTicker value={400000} className='inline bg-gradient-to-r from-lime-500 to-lime-600 bg-clip-text text-transparent'/>+
+            <NumberTicker value={450000} className='inline bg-gradient-to-r from-lime-500 to-lime-600 bg-clip-text text-transparent'/>+
           </span>
         </motion.span>
       </motion.div>
@@ -49,6 +49,13 @@ function RecycledCount() {
             whileTap={{ scale: 0.95 }}
           >
             <img src="https://acecycleassets.vercel.app/austin_humane_society.jpg" alt="Austin Humane Center" className="max-w-full max-h-full" />
+          </motion.div>
+          <motion.div
+            className="w-80 h-40 bg-white rounded-lg shadow-md flex items-center justify-center"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <img src="https://acecycleassets.vercel.app/tennis_now.webp" alt="Tennis Now" className="max-w-full max-h-full p-1" />
           </motion.div>
         </div>
       </motion.div>

@@ -13,6 +13,7 @@ function Footer() {
                   />
                 </a>
               </div>
+              <div className="md:flex hidden text-sm">© Copyright AceCycle 2024.&nbsp;&nbsp;All Rights Reserved.</div>
               <div className="flex space-x-4">
                 <a
                   href="/"
@@ -33,6 +34,7 @@ function Footer() {
                   Contact
                 </a>
               </div>
+              <div className="md:hidden flex text-sm mt-10">© Copyright AceCycle 2024.&nbsp;&nbsp;All Rights Reserved.</div>
             </div>
           </div>
         </footer>
