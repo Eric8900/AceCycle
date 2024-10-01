@@ -10,18 +10,6 @@
         "position": "CTO | President of Katy, TX",
         "linkedin": "https://linkedin.com/in/echen890",
         "image": "https://acecycleassets.vercel.app/Eric.jpeg"
-    }, 
-    {
-        "name": "Ning Yu | Katy",
-        "position": "Co-President",
-        "linkedin": "https://app.utrsports.net/profiles/874168",
-        "image": "https://acecycleassets.vercel.app/Ning.jpeg"
-    },
-    {
-        "name": "Allan Xu | Katy",
-        "position": "Co-President",
-        "linkedin": "https://app.utrsports.net/profiles/2617780/",
-        "image": "https://acecycleassets.vercel.app/Allan.jpeg"
     },
     {
         "name": "Dheeraj Tallapragada | Bay Area",
@@ -30,22 +18,46 @@
         "image": "https://acecycleassets.vercel.app/Dheeraj.jpg"
     },
     {
+        "name": "Ning Yu | Katy",
+        "position": "Co-President",
+        "linkedin": "https://app.utrsports.net/profiles/874168",
+        "image": "https://acecycleassets.vercel.app/Ning.jpeg"
+    },
+    {
         "name": "Shreyan Dey | Dallas",
         "position": "President of Dallas, TX and Co-President",
         "linkedin": "https://app.utrsports.net/profiles/821728",
         "image": "https://acecycleassets.vercel.app/Shreyan.jpg"
     },
     {
-        "name": "Sibi Raja | Austin",
-        "position": "President of Austin, TX",
-        "linkedin": "https://app.utrsports.net/profiles/293893",
-        "image": "https://acecycleassets.vercel.app/Sibi.jpeg"
+        "name": "Laksh Mehta | Chicago",
+        "position": "President of Chicago, IL",
+        "linkedin": "https://app.utrsports.net/",
+        "image": "https://acecycleassets.vercel.app/Laksh.jpeg"
+    },
+    {
+        "name": "Jashan Chahal | Kingwood",
+        "position": "President of Kingwood, TX",
+        "linkedin": "https://app.utrsports.net/",
+        "image": "https://acecycleassets.vercel.app/Jashan.jpeg"
     },
     {
         "name": "Pratik Sahajani | Sugar Land",
         "position": "President of Sugar Land, TX",
         "linkedin": "https://app.utrsports.net/profiles/874167",
         "image": "https://acecycleassets.vercel.app/Pratik.jpeg"
+    },
+    {
+        "name": "Allan Xu | Katy",
+        "position": "Co-President",
+        "linkedin": "https://app.utrsports.net/profiles/2617780/",
+        "image": "https://acecycleassets.vercel.app/Allan.jpeg"
+    },
+    {
+        "name": "Sibi Raja | Austin",
+        "position": "President of Austin, TX",
+        "linkedin": "https://app.utrsports.net/profiles/293893",
+        "image": "https://acecycleassets.vercel.app/Sibi.jpeg"
     },
     {
         "name": "Gabriel Segubiense | Sugar Land",
@@ -70,18 +82,6 @@
         "position": "President of New York, New Jersey, Connecticut",
         "linkedin": "https://app.utrsports.net/",
         "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
-    },
-    {
-        "name": "Laksh Mehta | Chicago",
-        "position": "President of Chicago, IL",
-        "linkedin": "https://app.utrsports.net/",
-        "image": "https://acecycleassets.vercel.app/Laksh.jpeg"
-    },
-    {
-        "name": "Jashan Chahal | Kingwood",
-        "position": "President of Kingwood, TX",
-        "linkedin": "https://app.utrsports.net/",
-        "image": "https://acecycleassets.vercel.app/Jashan.jpeg"
     },
     {
         "name": "Nithish Thirumavalavan | Orlando",
