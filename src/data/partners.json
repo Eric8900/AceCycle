@@ -1,0 +1,37 @@
+[
+    {
+        "href": "https://www.tennisexpress.com/",
+        "imgSrc": "https://acecycleassets.vercel.app/tennis_express.png",
+        "alt": "Tennis Express"
+    },
+    {
+        "href": "https://austinhumanesociety.org/",
+        "imgSrc": "https://acecycleassets.vercel.app/austin_humane_society.jpg",
+        "alt": "Austin Humane Center"
+    },
+    {
+        "href": "https://www.tennisnow.online/",
+        "imgSrc": "https://acecycleassets.vercel.app/tennis_now.webp",
+        "alt": "Tennis Now"
+    },
+    {
+        "href": "https://petallianceorlando.org/",
+        "imgSrc": "https://acecycleassets.vercel.app/pet_alliance.webp",
+        "alt": "Pet Alliance of Orlando"
+    },
+    {
+        "href": "https://www.sbpd.net/",
+        "imgSrc": "https://acecycleassets.vercel.app/south_barrington.webp",
+        "alt": "South Barrington Club Tennis Courts at Chicago"
+    },
+    {
+        "href": "https://kingdaddysports.net/",
+        "imgSrc": "https://acecycleassets.vercel.app/king_daddy.png",
+        "alt": "King Daddy Raquet Sports"
+    },
+    {
+        "href": "https://themayhew.org/",
+        "imgSrc": "https://acecycleassets.vercel.app/mayhew.webp",
+        "alt": "The Mayhew"
+    }
+]
