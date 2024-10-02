@@ -6,7 +6,7 @@ function RecycledCount() {
   const { ref, inView } = useInView();
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-green-100 py-[50%] sm:py-0" ref={ref}>
+    <div className="flex flex-col justify-center items-center min-h-screen bg-green-100 py-[50%] sm:py-[10%]" ref={ref}>
       <motion.div
         className="text-center"
         initial={{ opacity: 0 }}
@@ -35,7 +35,7 @@ function RecycledCount() {
         transition={{ duration: 1, delay: 0.5 }}
       >
         <h3 className="text-2xl sm:text-4xl lg:text-5xl font-semibold mb-6 text-gray-700 mt-[10%]">Our Partners</h3>
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
+        <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center items-center gap-8 mx-10">
           <motion.div
             className="w-80 h-40 bg-white rounded-lg shadow-md flex items-center justify-center"
             whileHover={{ scale: 1.05 }}
@@ -56,6 +56,20 @@ function RecycledCount() {
             whileTap={{ scale: 0.95 }}
           >
             <img src="https://acecycleassets.vercel.app/tennis_now.webp" alt="Tennis Now" className="max-w-full max-h-full p-1" />
+          </motion.div>
+          <motion.div
+            className="w-80 h-40 bg-white rounded-lg shadow-md flex items-center justify-center"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <img src="https://acecycleassets.vercel.app/pet_alliance.webp" alt="Pet Alliance of Orlando" className="max-w-full max-h-full p-1" />
+          </motion.div>
+          <motion.div
+            className="w-80 h-40 bg-white rounded-lg shadow-md flex items-center justify-center"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <img src="https://acecycleassets.vercel.app/south_barrington.webp" alt="South Barrington Club Tennis Courts at Chicago" className="max-w-full max-h-full p-1" />
           </motion.div>
         </div>
       </motion.div>
