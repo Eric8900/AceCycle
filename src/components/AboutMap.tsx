@@ -1,4 +1,5 @@
-import { useState, useRef } from 'react';
+"use client";
+import { useState, useRef, useEffect } from 'react';
 import { ComposableMap, Geographies, Geography, Marker } from "react-simple-maps";
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
@@ -31,6 +32,11 @@ const cities = [
     { name: "Carmel, IN", coordinates: [-86.122084, 39.974733] },
 ];
 
+const internationalLocations = [
+    { name: "Vancouver, Canada" },
+    { name: "London, UK" },
+];
+
 const states = [
     "Texas", "Georgia", "Florida", "North Carolina", "New Jersey", "New York", "Connecticut", "Illinois", "Virginia", "California", "South Carolina", "Kentucky", "Missouri", "Maryland", "Indiana"
 ];
@@ -38,68 +44,142 @@ const states = [
 const AboutMap = () => {
     const [hoveredCity, setHoveredCity] = useState("");
     const mapRef = useRef(null);
+    const scrollRef = useRef<HTMLDivElement | null>(null);
+    const animationRef = useRef<number | null>(null);
+
+    useEffect(() => {
+        const scrollContainer = scrollRef.current;
+        if (scrollContainer) {
+            const scrollWidth = scrollContainer.scrollWidth;
+
+            const animateScroll = () => {
+                if (scrollContainer.scrollLeft >= scrollWidth / 2) {
+                    scrollContainer.scrollLeft = 0;
+                } else {
+                    scrollContainer.scrollLeft += 0.5;
+                }
+                animationRef.current = requestAnimationFrame(animateScroll);
+            };
+
+            animationRef.current = requestAnimationFrame(animateScroll);
+
+            return () => {
+                if (animationRef.current) {
+                    cancelAnimationFrame(animationRef.current);
+                }
+            };
+        }
+    }, []);
+
+    useEffect(() => {
+        const handleVisibilityChange = () => {
+            if (!document.hidden && scrollRef.current) {
+                const scrollWidth = scrollRef.current.scrollWidth;
+                if (scrollRef.current.scrollLeft >= scrollWidth / 2) {
+                    scrollRef.current.scrollLeft = 0;
+                }
+            }
+        };
+
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+
+        return () => {
+            document.removeEventListener('visibilitychange', handleVisibilityChange);
+        };
+    }, []);
 
     return (
         <div className="flex flex-col justify-center items-center w-full max-w-5xl overflow-visible mx-auto my-36 relative" ref={mapRef}>
             <h1 className="text-gray-800 md:text-7xl text-5xl font-extrabold text-center my-10">Our Locations</h1>
-            <ComposableMap projection="geoAlbersUsa">
-                <Geographies geography={geoUrl}>
-                    {({ geographies }) =>
-                        geographies.map((geo) => {
-                            const cur = states.find(c => c === geo.properties.name);
-                            return (
-                                <a href={`mailto:nishantg2706@gmail.com?subject=Create%20a%20Chapter%20in%20${geo.properties.name}&body=Hello%2C%0A%0AI'm%20interested%20in%20creating%20a%20chapter%20in%20${geo.properties.name}.%20Can%20you%20please%20provide%20more%20information%20on%20how%20to%20get%20started%3F%0A%0AThank%20you!`} target="_top">
-                                    <Geography
-                                        geography={geo}
-                                        fill={cur ? "#84cc16" : "#D6D6DA"}
-                                        stroke="#FFFFFF"
-                                        className="hover:fill-[#b5c49d] transition-colors duration-300 cursor-pointer"
-                                        style={{
-                                            default: {
-                                                outline: "none",
-                                                userSelect: "none",
-                                            },
-                                            hover: {
-                                                outline: "none",
-                                            },
-                                            pressed: {
-                                                outline: "none",
-                                            },
-                                        }}
-                                    />
-                                </a>
-                            );
-                        })
-                    }
-                </Geographies>
-                {cities.map(({ name, coordinates }) => (
-                    <Marker
-                        key={name}
-                        coordinates={[coordinates[0], coordinates[1]]}
-                        onMouseEnter={() => setHoveredCity(name)}
-                        onMouseLeave={() => setHoveredCity("")}
-                    >
-                        <g>
-                            <circle
-                                r={hoveredCity === name ? "8" : "5"}
-                                fill={hoveredCity === name ? "rgba(20,20,20, 1)" : "rgba(20,20,20, 0.8)"}
-                                style={{
-                                    transition: "all 200ms ease-in-out"
-                                }}
-                            />
-                        </g>
-                    </Marker>
-                ))}
-            </ComposableMap>
-            <div className="h-8 bg-white bg-opacity-75 p-2 text-center w-full">
-                {hoveredCity && (
-                    <p className="text-3xl font-semibold text-gray-800">{hoveredCity}</p>
-                )}
+
+            {/* International Locations Section */}
+            <div className="w-full text-center mb-10">
+                <h2 className="text-3xl font-bold mb-4"><b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">International</b> Locations</h2>
+                <div className="flex justify-center space-x-8">
+                    {internationalLocations.map((location) => (
+                        <p key={location.name} className="text-xl font-semibold text-gray-700">{location.name}</p>
+                    ))}
+                </div>
             </div>
-            <h1 className='text-3xl font-bold mt-16'>Want to create a chapter?</h1>
-            <h1 className='font-light'>Click on your state or email <span><a href='mailto:nishantg2706@gmail.com' className='text-lime-500 hover:text-lime-600'>nishantg2706@gmail.com</a></span></h1>
-        </div>
-    );
+            {/* US Locations Section */}
+            <div className="w-full text-center mb-10">
+                <h2 className="text-3xl font-bold mb-4"><b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">U.S.</b> Locations</h2>
+                <div className="relative overflow-hidden">
+                    <div className="absolute left-0 top-0 bottom-0 w-5 sm:w-36 bg-gradient-to-r from-white via-white to-transparent z-10 pointer-events-none"></div>
+                    <div className="absolute right-0 top-0 bottom-0 w-5 sm:w-36 bg-gradient-to-l from-white via-white to-transparent z-10 pointer-events-none"></div>
+                    <div
+                        ref={scrollRef}
+                        className="flex overflow-x-hidden whitespace-nowrap py-2"
+                        style={{ width: '100%' }}
+                    >
+                        {cities.concat(cities).map((location, index) => (
+                            <span key={`${location.name}-${index}`} className="inline-block px-4 text-xl font-semibold text-gray-700">
+                                {location.name}
+                            </span>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+                <ComposableMap projection="geoAlbersUsa">
+                    <Geographies geography={geoUrl}>
+                        {({ geographies }) =>
+                            geographies.map((geo) => {
+                                const cur = states.find(c => c === geo.properties.name);
+                                return (
+                                    <a href={`mailto:nishantg2706@gmail.com?subject=Create%20a%20Chapter%20in%20${geo.properties.name}&body=Hello%2C%0A%0AI'm%20interested%20in%20creating%20a%20chapter%20in%20${geo.properties.name}.%20Can%20you%20please%20provide%20more%20information%20on%20how%20to%20get%20started%3F%0A%0AThank%20you!`} target="_top">
+                                        <Geography
+                                            key={geo.rsmKey}
+                                            geography={geo}
+                                            fill={cur ? "#84cc16" : "#D6D6DA"}
+                                            stroke="#FFFFFF"
+                                            className="hover:fill-[#b5c49d] transition-colors duration-300 cursor-pointer"
+                                            style={{
+                                                default: {
+                                                    outline: "none",
+                                                    userSelect: "none",
+                                                },
+                                                hover: {
+                                                    outline: "none",
+                                                },
+                                                pressed: {
+                                                    outline: "none",
+                                                },
+                                            }}
+                                        />
+                                    </a>
+                                );
+                            })
+                        }
+                    </Geographies>
+                    {cities.map(({ name, coordinates }) => (
+                        <Marker
+                            key={name}
+                            coordinates={[coordinates[0], coordinates[1]]}
+                            onMouseEnter={() => setHoveredCity(name)}
+                            onMouseLeave={() => setHoveredCity("")}
+                        >
+                            <g>
+                                <circle
+                                    r={hoveredCity === name ? "8" : "5"}
+                                    fill={hoveredCity === name ? "rgba(20,20,20, 1)" : "rgba(20,20,20, 0.8)"}
+                                    style={{
+                                        transition: "all 200ms ease-in-out"
+                                    }}
+                                />
+                            </g>
+                        </Marker>
+                    ))}
+                </ComposableMap>
+                <div className="h-8 bg-white bg-opacity-75 p-2 text-center w-full">
+                    {hoveredCity && (
+                        <p className="text-3xl font-semibold text-gray-800">{hoveredCity}</p>
+                    )}
+                </div>
+                <h1 className='text-3xl font-bold mt-16'>Want to create a chapter?</h1>
+                <h1 className='font-light'>Click on your state or email <span><a href='mailto:nishantg2706@gmail.com' className='text-lime-500 hover:text-lime-600'>nishantg2706@gmail.com</a></span></h1>
+            </div>
+            );
 };
 
-export default AboutMap;
+            export default AboutMap;

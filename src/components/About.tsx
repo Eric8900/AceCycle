@@ -48,7 +48,7 @@ const content = [
       </>
     ),
     image:
-      "https://www.bhf.org.uk/-/media/images/information-support/heart-matters/heart-matters/summer-2018/activity/tennis_racket_balls_ss_0618_noexp_620x400.jpg?rev=c18a71fbd05e4a91b4bbc40af01aafaa&hash=B6D9F53AC70899560495FC5D3205784D",
+      "https://acecycleassets.vercel.app/about_1.jpg",
   },
   {
     title: "Our Vision",
@@ -58,7 +58,7 @@ const content = [
       </>
     ),
     image:
-      "https://img.freepik.com/premium-photo/tennis-balls-scattered-green-court_762026-99671.jpg",
+      "https://acecycleassets.vercel.app/about_2.jpg",
   },
   {
     title: "Our Mission",
@@ -68,6 +68,6 @@ const content = [
       </>
     ),
     image:
-      "https://images.squarespace-cdn.com/content/v1/5d00027f6ef1b60001fb7afb/1591651918979-34GQKTI36IY7JS9JJNB2/070819+RecycleballsFacility.jpg.JPG",
+      "https://acecycleassets.vercel.app/about_3.jpg",
   },
 ];
