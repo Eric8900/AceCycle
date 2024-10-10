@@ -3,6 +3,7 @@ import { Hero } from "./components/Hero"
 import RecycledCount from "./components/RecycledCount"
 import { About } from "./components/About"
 import Footer from "./components/Footer"
+import FeaturedPublications from "./components/Publications"
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <Navbar/>
       <Hero/>
       <RecycledCount/>
+      <FeaturedPublications/>
       <About/>
       <Footer/>
     </>
