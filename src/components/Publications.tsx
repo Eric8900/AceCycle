@@ -13,7 +13,7 @@ const publications: Publication[] = [
         id: '1',
         title: 'An Open-Access Machine Learning Framework for Sustainable Tennis Ball Management: Optimizing Use and Reducing Environmental Impact for Tennis Stores and Clubs',
         imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Closeup_of_a_tennis_ball_%282%29.jpg/640px-Closeup_of_a_tennis_ball_%282%29.jpg',
-        pdfUrl: 'https://www.preprints.org/manuscript/202410.0609/v1',
+        pdfUrl: 'https://www.preprints.org/manuscript/202410.0609/v2',
     },
 ];
 
