@@ -105,7 +105,7 @@ export const Header = () => {
         Reduce, Reuse, <b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">AceCycle</b>
       </h1>
       <p className="max-w-xl text-xl md:text-2xl font-light drop-shadow-2xl my-8 dark:text-neutral-200">
-        We are an international non-profit committed to recycling tennis balls globally.
+        We are an international non-profit founded in 2022 committed to recycling tennis balls globally.
       </p>
       <a
         className="inline-flex h-9 w-max items-center justify-center rounded-md"

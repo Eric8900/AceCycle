@@ -33,5 +33,10 @@
         "href": "https://themayhew.org/",
         "imgSrc": "https://acecycleassets.vercel.app/mayhew.webp",
         "alt": "The Mayhew"
+    },
+    {
+        "href": "https://playitagainsports.com/locations/roswell-ga/",
+        "imgSrc": "https://acecycleassets.vercel.app/play_it_again_sports.png",
+        "alt": "Play It Again Sports"
     }
 ]
