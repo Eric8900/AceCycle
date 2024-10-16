@@ -31,7 +31,7 @@
     },
     {
         "name": "Shreyan Dey | Dallas",
-        "position": "Co-President | President of Dallas, TX and Co-President",
+        "position": "Co-Founder | Co-President | President of Dallas, TX",
         "linkedin": "https://app.utrsports.net/profiles/821728",
         "image": "https://acecycleassets.vercel.app/Shreyan.jpg"
     },
@@ -88,5 +88,17 @@
         "position": "President of Orlando, FL",
         "linkedin": "https://app.utrsports.net/",
         "image": "https://acecycleassets.vercel.app/Nithish.jpeg"
+    },
+    {
+        "name": "Rohan Phukan | North Carolina",
+        "position": "President of Charlotte, NC and Indian Land, SC",
+        "linkedin": "https://app.utrsports.net/",
+        "image": "https://t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
+    },
+    {
+        "name": "Aaditiya Jagannathan | Virginia, Maryland",
+        "position": "Representative of TennisNow",
+        "linkedin": "https://app.utrsports.net/",
+        "image": "https://t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
     }
 ]
