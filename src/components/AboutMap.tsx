@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { ComposableMap, Geographies, Geography, Marker } from "react-simple-maps";
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
@@ -45,6 +45,49 @@ const states = [
 const AboutMap = () => {
     const [hoveredCity, setHoveredCity] = useState("");
     const mapRef = useRef(null);
+    const scrollRef = useRef<HTMLDivElement | null>(null);
+    const animationRef = useRef<number | null>(null);
+
+    useEffect(() => {
+        const scrollContainer = scrollRef.current;
+        if (scrollContainer) {
+            const scrollWidth = scrollContainer.scrollWidth;
+
+            const animateScroll = () => {
+                if (scrollContainer.scrollLeft >= scrollWidth / 2) {
+                    scrollContainer.scrollLeft = 0;
+                } else {
+                    scrollContainer.scrollLeft += 0.5;
+                }
+                animationRef.current = requestAnimationFrame(animateScroll);
+            };
+
+            animationRef.current = requestAnimationFrame(animateScroll);
+
+            return () => {
+                if (animationRef.current) {
+                    cancelAnimationFrame(animationRef.current);
+                }
+            };
+        }
+    }, []);
+
+    useEffect(() => {
+        const handleVisibilityChange = () => {
+            if (!document.hidden && scrollRef.current) {
+                const scrollWidth = scrollRef.current.scrollWidth;
+                if (scrollRef.current.scrollLeft >= scrollWidth / 2) {
+                    scrollRef.current.scrollLeft = 0;
+                }
+            }
+        };
+
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+
+        return () => {
+            document.removeEventListener('visibilitychange', handleVisibilityChange);
+        };
+    }, []);
 
     return (
         <div className="flex flex-col justify-center items-center w-full max-w-5xl overflow-visible mx-auto my-36 relative" ref={mapRef}>
@@ -62,10 +105,14 @@ const AboutMap = () => {
             {/* US Locations Section */}
             <div className="w-full text-center mb-10">
                 <h2 className="text-3xl font-bold mb-4"><b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">U.S.</b> Locations</h2>
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-x-scroll sm:overflow-hidden">
                     <div className="absolute left-0 top-0 bottom-0 w-5 sm:w-36 bg-gradient-to-r from-white via-white to-transparent z-10 pointer-events-none"></div>
                     <div className="absolute right-0 top-0 bottom-0 w-5 sm:w-36 bg-gradient-to-l from-white via-white to-transparent z-10 pointer-events-none"></div>
-                    <div className="flex whitespace-nowrap py-2 animate-slide">
+                    <div
+                        ref={scrollRef}
+                        className="flex overflow-x-hidden whitespace-nowrap py-2"
+                        style={{ width: '100%' }}
+                    >
                         {cities.concat(cities).map((location, index) => (
                             <span key={`${location.name}-${index}`} className="inline-block px-4 text-xl font-semibold text-gray-700">
                                 {location.name}
