@@ -110,7 +110,7 @@ const AboutMap = () => {
                     <div className="absolute right-0 top-0 bottom-0 w-5 sm:w-36 bg-gradient-to-l from-white via-white to-transparent z-10 pointer-events-none"></div>
                     <div
                         ref={scrollRef}
-                        className="flex overflow-x-hidden whitespace-nowrap py-2"
+                        className="flex scrollbar-hide overflow-x-scroll whitespace-nowrap py-2"
                         style={{ width: '100%' }}
                     >
                         {cities.concat(cities).map((location, index) => (
