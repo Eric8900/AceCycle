@@ -1,41 +1,40 @@
 import { twMerge } from "tailwind-merge";
 import { TracingBeam } from "@/components/ui/tracing-beam";
-import { motion } from "framer-motion";
+import { Card, Carousel } from "./ui/apple-cards-carousel";
+import BlurIn from "./ui/blur-in";
 
 export function About() {
+  const cards = data.map((card) => (
+    <Card key={card.src} card={card} />
+  ));
   return (
-    <>
-    <motion.h1
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1.5 }}
-      viewport={{ once: true }}
-      className="text-center md:text-8xl text-7xl mx-10 text-gray-800 py-36"
-    >
-      What <b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">we</b> do
-    </motion.h1>
-    <TracingBeam className="px-6">
+    <div className="overflow-x-hidden">
+      <BlurIn className="text-center md:text-8xl text-7xl text-gray-800 py-36 mx-10">
+        What <b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">we</b> do
+      </BlurIn>
+      <Carousel items={cards} />
+      <TracingBeam className="px-6 mt-36">
         <div className="max-w-2xl mx-auto antialiased pt-4 relative px-8">
-            {content.map((item, index) => (
+          {content.map((item, index) => (
             <div key={`content-${index}`} className="mb-10">
 
-                <p className={twMerge("md:text-3xl text-2xl mb-4 text-lime-700")}>{item.title}</p>
+              <p className={twMerge("md:text-3xl text-2xl mb-4 text-lime-700")}>{item.title}</p>
 
-                <div className="text-sm md:text-lg prose prose-sm dark:prose-invert">
+              <div className="text-sm md:text-lg prose prose-sm dark:prose-invert">
                 {item?.image && (
-                    <img
+                  <img
                     src={item.image}
                     alt="thumbnail"
                     className="rounded-lg mb-10 object-cover"
-                    />
+                  />
                 )}
                 {item.description}
-                </div>
+              </div>
             </div>
-            ))}
+          ))}
         </div>
-    </TracingBeam>
-    </>
+      </TracingBeam>
+    </div>
   );
 }
 
@@ -69,5 +68,24 @@ const content = [
     ),
     image:
       "https://acecycleassets.vercel.app/about_3.jpg",
+  },
+];
+
+const data = [
+  {
+    title: "Tennis Balls",
+    src: "https://acecycleassets.vercel.app/about_4.jpg",
+  },
+  {
+    title: "Tennis Balls",
+    src: "https://acecycleassets.vercel.app/about_5.jpg",
+  },
+  {
+    title: "Tennis Balls",
+    src: "https://acecycleassets.vercel.app/about_6.jpg",
+  },
+  {
+    title: "Tennis Balls",
+    src: "https://acecycleassets.vercel.app/about_7.jpg",
   },
 ];

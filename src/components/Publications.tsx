@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
 import React from 'react';
+import BlurIn from './ui/blur-in';
 
 interface Publication {
     id: string;
@@ -20,15 +20,10 @@ const publications: Publication[] = [
 const FeaturedPublications: React.FC = () => {
     return (
         <div className="container mx-auto px-4 py-8">
-            <motion.h1
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 1.5 }}
-                viewport={{ once: true }}
-                className="text-center md:text-8xl text-7xl mx-10 text-gray-800 py-36"
-            >
+            <BlurIn 
+                className="text-center md:text-8xl text-7xl text-gray-800 py-36">
                 <b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">Our</b> Research
-            </motion.h1>
+            </BlurIn>
             <div className="flex flex-col md:flex-row justify-center items-center gap-8">
                 {publications.map((pub) => (
                     <a target="_blank" rel="noopener noreferrer" href={pub.pdfUrl} key={pub.id} className="block">
