@@ -1,10 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
-
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import { cn } from "@/lib/utils";
 
-interface BlurIntProps {
+interface BlurInProps {
   children: React.ReactNode;
   className?: string;
   variant?: {
@@ -13,8 +13,25 @@ interface BlurIntProps {
   };
   duration?: number;
   delay?: number;
+  margin?: string;
+  once?: boolean;
 }
-const BlurIn = ({ children, className, variant, duration = 1, delay = 0 }: BlurIntProps) => {
+
+const BlurIn = ({ 
+  children, 
+  className, 
+  variant, 
+  duration = 1, 
+  delay = 0,
+  margin = "0px",
+  once = true 
+}: BlurInProps) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    margin,
+    once
+  });
+
   const defaultVariants = {
     hidden: { filter: "blur(10px)", opacity: 0 },
     visible: { filter: "blur(0px)", opacity: 1 },
@@ -23,12 +40,13 @@ const BlurIn = ({ children, className, variant, duration = 1, delay = 0 }: BlurI
 
   return (
     <motion.h1
+      ref={ref}
       initial="hidden"
-      animate="visible"
+      animate={isInView ? "visible" : "hidden"}
       transition={{ duration, delay }}
       variants={combinedVariants}
       className={cn(
-        "tracking-[-0.02em] drop-shadow-sm md:leading-[5rem]",
+        "drop-shadow-sm",
         className,
       )}
     >

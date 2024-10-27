@@ -8,11 +8,13 @@ export function About() {
     <Card key={card.src} card={card} />
   ));
   return (
-    <div className="overflow-x-hidden">
-      <BlurIn className="text-center md:text-8xl text-7xl text-gray-800 py-36 mx-10">
+    <div>
+      <BlurIn delay={0.4} className="text-center md:text-8xl text-7xl text-gray-800 py-36 mx-10">
         What <b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">we</b> do
       </BlurIn>
-      <Carousel items={cards} />
+      <div className="overflow-x-hidden">
+        <Carousel items={cards} />
+      </div>
       <TracingBeam className="px-6 mt-36">
         <div className="max-w-2xl mx-auto antialiased pt-4 relative px-8">
           {content.map((item, index) => (
@@ -72,6 +74,10 @@ const content = [
 ];
 
 const data = [
+  {
+    title: "Dog Chewing Tennis Ball",
+    src: "https://acecycleassets.vercel.app/dog_chew_tennis.jpg",
+  },
   {
     title: "Tennis Balls",
     src: "https://acecycleassets.vercel.app/about_4.jpg",

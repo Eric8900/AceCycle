@@ -5,12 +5,12 @@ import partnersData from '@/data/partners.json'
 import BlurIn from './ui/blur-in';
 
 function RecycledCount() {
-  const { ref, inView } = useInView();
+  const { ref } = useInView();
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen bg-green-100 py-[50%] sm:py-[10%]" ref={ref}>
       <div className='text-center'>
-        <BlurIn className="text-7xl font-bold mb-12 text-gray-800 text-center">
+        <BlurIn once={true} className="text-7xl font-bold mb-12 text-gray-800 text-center">
           Balls Recycled
         </BlurIn>
         <motion.span
@@ -24,14 +24,15 @@ function RecycledCount() {
           </span>
         </motion.span>
       </div>
-      <BlurIn className="text-2xl sm:text-4xl lg:text-5xl font-semibold mb-6 text-gray-700 mt-[10%]">Our Partners</BlurIn>
+      <BlurIn once={true} className="text-2xl sm:text-4xl lg:text-5xl font-semibold mb-6 text-gray-700 mt-[10%]">Our Partners</BlurIn>
       <motion.div
         className="mt-16 text-center"
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center items-center gap-8 mx-10">
+        <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center items-center gap-8">
           {partnersData.map((partner: { href: string | undefined; imgSrc: string | undefined; alt: string | undefined; }) => (
             <a href={partner.href} target="_blank" rel="noopener noreferrer">
             <motion.div

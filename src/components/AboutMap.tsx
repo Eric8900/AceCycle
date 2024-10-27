@@ -122,65 +122,75 @@ const AboutMap = () => {
                 </div>
             </div>
 
-                <ComposableMap projection="geoAlbersUsa">
-                    <Geographies geography={geoUrl}>
-                        {({ geographies }) =>
-                            geographies.map((geo) => {
-                                const cur = states.find(c => c === geo.properties.name);
-                                return (
-                                    <a href={`mailto:nishantg2706@gmail.com?subject=Create%20a%20Chapter%20in%20${geo.properties.name}&body=Hello%2C%0A%0AI'm%20interested%20in%20creating%20a%20chapter%20in%20${geo.properties.name}.%20Can%20you%20please%20provide%20more%20information%20on%20how%20to%20get%20started%3F%0A%0AThank%20you!`} target="_top">
-                                        <Geography
-                                            key={geo.rsmKey}
-                                            geography={geo}
-                                            fill={cur ? "#84cc16" : "#D6D6DA"}
-                                            stroke="#FFFFFF"
-                                            className="hover:fill-[#b5c49d] transition-colors duration-300 cursor-pointer"
-                                            style={{
-                                                default: {
-                                                    outline: "none",
-                                                    userSelect: "none",
-                                                },
-                                                hover: {
-                                                    outline: "none",
-                                                },
-                                                pressed: {
-                                                    outline: "none",
-                                                },
-                                            }}
-                                        />
-                                    </a>
-                                );
-                            })
-                        }
-                    </Geographies>
-                    {cities.map(({ name, coordinates }) => (
-                        <Marker
-                            key={name}
-                            coordinates={[coordinates[0], coordinates[1]]}
-                            onMouseEnter={() => setHoveredCity(name)}
-                            onMouseLeave={() => setHoveredCity("")}
-                        >
-                            <g>
-                                <circle
-                                    r={hoveredCity === name ? "8" : "5"}
-                                    fill={hoveredCity === name ? "rgba(20,20,20, 1)" : "rgba(20,20,20, 0.8)"}
-                                    style={{
-                                        transition: "all 200ms ease-in-out"
-                                    }}
-                                />
-                            </g>
-                        </Marker>
-                    ))}
-                </ComposableMap>
-                <div className="h-8 bg-white bg-opacity-75 p-2 text-center w-full">
-                    {hoveredCity && (
-                        <p className="text-3xl font-semibold text-gray-800">{hoveredCity}</p>
-                    )}
-                </div>
-                <h1 className='text-3xl font-bold mt-16'>Want to create a chapter?</h1>
-                <h1 className='font-light'>Click on your state or email <span><a href='mailto:nishantg2706@gmail.com' className='text-lime-500 hover:text-lime-600'>nishantg2706@gmail.com</a></span></h1>
+            <ComposableMap projection="geoAlbersUsa">
+                <Geographies geography={geoUrl}>
+                    {({ geographies }) =>
+                        geographies.map((geo) => {
+                            const cur = states.find(c => c === geo.properties.name);
+                            return (
+                                <a 
+                                href={`mailto:nishantg2706@gmail.com?subject=AceCycle%3A%20Creating%20a%20New%20Chapter%20in%20%5BName%20Your%20City%5D%2C%20${geo.properties.name}&body=Hello%2C%0A%0AI%20would%20like%20to%20learn%20more%20about%20creating%20a%20new%20chapter%20for%20AceCycle.%20Could%20you%20please%20provide%20more%20information%20regarding%20how%20to%20get%20started%3F%20%0A%0AThank%20you!`} 
+                                target="_top">
+                                    <Geography
+                                        key={geo.rsmKey}
+                                        geography={geo}
+                                        fill={cur ? "#84cc16" : "#D6D6DA"}
+                                        stroke="#FFFFFF"
+                                        className="hover:fill-[#b5c49d] transition-colors duration-300 cursor-pointer"
+                                        style={{
+                                            default: {
+                                                outline: "none",
+                                                userSelect: "none",
+                                            },
+                                            hover: {
+                                                outline: "none",
+                                            },
+                                            pressed: {
+                                                outline: "none",
+                                            },
+                                        }}
+                                    />
+                                </a>
+                            );
+                        })
+                    }
+                </Geographies>
+                {cities.map(({ name, coordinates }) => (
+                    <Marker
+                        key={name}
+                        coordinates={[coordinates[0], coordinates[1]]}
+                        onMouseEnter={() => setHoveredCity(name)}
+                        onMouseLeave={() => setHoveredCity("")}
+                    >
+                        <g>
+                            <circle
+                                r={hoveredCity === name ? "8" : "5"}
+                                fill={hoveredCity === name ? "rgba(20,20,20, 1)" : "rgba(20,20,20, 0.8)"}
+                                style={{
+                                    transition: "all 200ms ease-in-out"
+                                }}
+                            />
+                        </g>
+                    </Marker>
+                ))}
+            </ComposableMap>
+            <div className="h-8 bg-white bg-opacity-75 p-2 text-center w-full">
+                {hoveredCity && (
+                    <p className="text-3xl font-semibold text-gray-800">{hoveredCity}</p>
+                )}
             </div>
-            );
+            <h1 className='text-3xl font-bold mt-16'>Want to create a chapter?</h1>
+            <h1 className='font-light'>
+                Click on your state or email&nbsp;
+                <span>
+                    <a href='mailto:nishantg2706@gmail.com?subject=AceCycle%3A%20Creating%20a%20New%20Chapter%20in%20%5BName%20Your%20City%5D%2C%20%5BName%20Your%20State%5D&body=Hello%2C%0A%0AI%20would%20like%20to%20learn%20more%20about%20creating%20a%20new%20chapter%20for%20AceCycle.%20Could%20you%20please%20provide%20more%20information%20regarding%20how%20to%20get%20started%3F%20%0A%0AThank%20you!' 
+                    className='text-lime-500 hover:text-lime-600'>
+                        nishantg2706@gmail.com
+                    </a>
+                </span>
+            </h1>
+        </div>
+    );
 };
 
-            export default AboutMap;
+export default AboutMap;

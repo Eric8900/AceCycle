@@ -4,6 +4,7 @@ import RecycledCount from "./components/RecycledCount"
 import { About } from "./components/About"
 import Footer from "./components/Footer"
 import FeaturedPublications from "./components/Publications"
+import CallToAction from "./components/CallToAction"
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <RecycledCount/>
       <FeaturedPublications/>
       <About/>
+      <CallToAction/>
       <Footer/>
     </>
   )
