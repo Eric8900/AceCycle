@@ -40,7 +40,8 @@ const CallToAction = () => {
                     <p className="text-lg mb-8">One email away from making a real difference in your tennis community.</p>
                     <a 
                     href='mailto:nishantg2706@gmail.com?subject=AceCycle%3A%20Creating%20a%20New%20Chapter%20in%20%5BName%20Your%20City%5D%2C%20%5BName%20Your%20State%5D&body=Hello%2C%0A%0AI%20would%20like%20to%20learn%20more%20about%20creating%20a%20new%20chapter%20for%20AceCycle.%20Could%20you%20please%20provide%20more%20information%20regarding%20how%20to%20get%20started%3F%20%0A%0AThank%20you!' 
-                    className='text-lime-500 hover:text-lime-600'>
+                    className='text-lime-500 hover:text-lime-600'
+                    target="_blank" rel="noopener noreferrer">
                         <button className="bg-lime-400 text-black hover:text-white px-8 py-3 rounded-full font-medium hover:bg-lime-700 transition-colors">
                             Email Us →
                         </button>

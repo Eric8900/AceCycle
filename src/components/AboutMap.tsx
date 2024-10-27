@@ -130,7 +130,7 @@ const AboutMap = () => {
                             return (
                                 <a 
                                 href={`mailto:nishantg2706@gmail.com?subject=AceCycle%3A%20Creating%20a%20New%20Chapter%20in%20%5BName%20Your%20City%5D%2C%20${geo.properties.name}&body=Hello%2C%0A%0AI%20would%20like%20to%20learn%20more%20about%20creating%20a%20new%20chapter%20for%20AceCycle.%20Could%20you%20please%20provide%20more%20information%20regarding%20how%20to%20get%20started%3F%20%0A%0AThank%20you!`} 
-                                target="_top">
+                                target="_blank" rel="noopener noreferrer">
                                     <Geography
                                         key={geo.rsmKey}
                                         geography={geo}
@@ -183,7 +183,9 @@ const AboutMap = () => {
             <h1 className='font-light'>
                 Click on your state or email&nbsp;
                 <span>
-                    <a href='mailto:nishantg2706@gmail.com?subject=AceCycle%3A%20Creating%20a%20New%20Chapter%20in%20%5BName%20Your%20City%5D%2C%20%5BName%20Your%20State%5D&body=Hello%2C%0A%0AI%20would%20like%20to%20learn%20more%20about%20creating%20a%20new%20chapter%20for%20AceCycle.%20Could%20you%20please%20provide%20more%20information%20regarding%20how%20to%20get%20started%3F%20%0A%0AThank%20you!' 
+                    <a 
+                    target="_blank" rel="noopener noreferrer"
+                    href='mailto:nishantg2706@gmail.com?subject=AceCycle%3A%20Creating%20a%20New%20Chapter%20in%20%5BName%20Your%20City%5D%2C%20%5BName%20Your%20State%5D&body=Hello%2C%0A%0AI%20would%20like%20to%20learn%20more%20about%20creating%20a%20new%20chapter%20for%20AceCycle.%20Could%20you%20please%20provide%20more%20information%20regarding%20how%20to%20get%20started%3F%20%0A%0AThank%20you!' 
                     className='text-lime-500 hover:text-lime-600'>
                         nishantg2706@gmail.com
                     </a>

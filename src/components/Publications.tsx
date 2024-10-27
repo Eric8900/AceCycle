@@ -20,7 +20,8 @@ const publications: Publication[] = [
 const FeaturedPublications: React.FC = () => {
     return (
         <div className="container mx-auto px-4 py-8">
-            <BlurIn 
+            <BlurIn
+                margin={"-200px"}
                 delay={0.4}
                 className="text-center md:text-8xl text-7xl text-gray-800 py-36">
                 <b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">Our</b> Research
