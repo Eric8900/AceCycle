@@ -1,7 +1,7 @@
 import { Marquee } from './ui/marquee';
 
 const CallToAction = () => {
-    const tennisRow = ["https://acecycleassets.vercel.app/about_4.jpg", "https://acecycleassets.vercel.app/about_3.jpg", "https://acecycleassets.vercel.app/about_6.jpg", "https://acecycleassets.vercel.app/about_2.jpg"];
+    const tennisRow = ["https://acecycleassets.vercel.app/about_4.jpg", "https://acecycleassets.vercel.app/about_3.jpg", "https://acecycleassets.vercel.app/about_6.jpg", "https://acecycleassets.vercel.app/about_1.jpg"];
 
     return (
         <div className='flex justify-center items-center w-full my-32'>

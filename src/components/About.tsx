@@ -83,7 +83,7 @@ const content = [
       </>
     ),
     image:
-      "https://acecycleassets.vercel.app/about_1.jpg",
+      "https://acecycleassets.vercel.app/about_9.jpg",
   },
   {
     title: "Our Vision",
@@ -93,7 +93,7 @@ const content = [
       </>
     ),
     image:
-      "https://acecycleassets.vercel.app/about_2.jpg",
+      "https://acecycleassets.vercel.app/about_8.jpg",
   },
   {
     title: "Our Mission",
@@ -109,8 +109,16 @@ const content = [
 
 const data = [
   {
-    title: "Dog Chewing Tennis Ball",
+    title: "Tennis Balls",
     src: "https://acecycleassets.vercel.app/about_3.jpg",
+  },
+  {
+    title: "Tennis Balls",
+    src: "https://acecycleassets.vercel.app/about_2.jpg",
+  },
+  {
+    title: "Tennis Balls",
+    src: "https://acecycleassets.vercel.app/about_1.jpg",
   },
   {
     title: "Tennis Balls",
