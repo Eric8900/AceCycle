@@ -24,9 +24,9 @@ function RecycledCount() {
           </span>
         </motion.span>
       </div>
-      <BlurIn once={true} className="text-2xl sm:text-4xl lg:text-5xl font-semibold mb-6 text-gray-700 mt-[10%]">Our Partners</BlurIn>
+      <BlurIn once={true} className="mt-16 text-2xl sm:text-4xl lg:text-5xl font-semibold mb-6 text-gray-700 mt-[10%]">Our Partners</BlurIn>
       <motion.div
-        className="mt-16 text-center"
+        className="text-center"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
