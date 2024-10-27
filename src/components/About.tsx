@@ -39,8 +39,8 @@ export function About() {
       </TracingBeam>
       <div className="flex flex-col lg:flex-row mt-32 w-full shadow-[inset_0_12px_24px_-12px_rgb(0,0,0,0.3)] bg-gradient-to-b from-green-100 to-white">
         <div className="flex flex-col justify-center items-center w-full text-center">
-          <BlurIn margin={"-200px"} className="text-lg sm:text-xl text-black font-light mt-32 lg:mt-0">Now on the App Store</BlurIn>
-          <BlurIn margin={"-200px"} className="text-4xl sm:text-6xl lg:text-5xl text-center mb-10">
+          <BlurIn margin={"-100px"} className="text-lg sm:text-xl text-black font-light mt-32 lg:mt-0">Now on the App Store</BlurIn>
+          <BlurIn margin={"-100px"} className="text-4xl sm:text-6xl lg:text-5xl text-center mb-10">
             The&nbsp;
             <b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent font-extrabold">
               AceCycle&nbsp;
@@ -50,7 +50,7 @@ export function About() {
           <Iphone15Pro className="size-[85%] sm:size-[65%] md:size-[45%] lg:size-[70%] drop-shadow-2xl" src="https://acecycleassets.vercel.app/acecycle_app.jpeg" />
         </div>
         <div className="flex flex-col justify-center items-center w-full text-center mt-32 lg:mt-0 lg:mx-10">
-          <BlurIn margin={"-200px"} className="text-4xl sm:text-5xl text-center mb-10">
+          <BlurIn margin={"-100px"} className="text-4xl sm:text-5xl text-center mb-10">
             <b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent font-bold">Scan On Phone</b>
             &nbsp;or&nbsp;
             <b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent font-bold">Click</b>
