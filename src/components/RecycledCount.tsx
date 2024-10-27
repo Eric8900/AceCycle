@@ -10,7 +10,7 @@ function RecycledCount() {
   return (
     <div className="flex flex-col justify-center items-center min-h-screen bg-green-100 py-[50%] sm:py-[10%]" ref={ref}>
       <div className='text-center'>
-        <BlurIn once={true} className="text-7xl font-bold mb-12 text-gray-800 text-center">
+        <BlurIn once={true} margin={"-100px"} className="text-7xl font-bold mb-12 text-gray-800 text-center">
           Balls Recycled
         </BlurIn>
         <motion.span
@@ -24,7 +24,7 @@ function RecycledCount() {
           </span>
         </motion.span>
       </div>
-      <BlurIn once={true} className="mt-16 text-2xl sm:text-4xl lg:text-5xl font-semibold mb-6 text-gray-700 mt-[10%]">Our Partners</BlurIn>
+      <BlurIn once={true} margin={"-100px"} className="mt-32 text-2xl sm:text-4xl lg:text-5xl font-semibold mb-6 text-gray-700">Our Partners</BlurIn>
       <motion.div
         className="text-center"
         initial={{ opacity: 0, y: 20 }}
