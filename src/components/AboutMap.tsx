@@ -30,16 +30,21 @@ const cities = [
     { name: "St. Louis, MO", coordinates: [-90.200206, 38.616867] },
     { name: "College Park, MD", coordinates: [-76.937764, 38.992729] },
     { name: "Carmel, IN", coordinates: [-86.122084, 39.974733] },
-    { name: "Philadelphia, PA", coordinates: [-75.162660, 39.961722] }
+    { name: "Philadelphia, PA", coordinates: [-75.162660, 39.961722] },
+    { name: "Midland, MI", coordinates: [-84.247035, 43.614758] },
+    { name: "Wilmington, DE", coordinates: [-75.548748, 39.739821] },
+    { name: "Kenosha, WI", coordinates: [-87.827642, 42.579057] }
 ];
 
 const internationalLocations = [
     { name: "Vancouver, Canada" },
     { name: "London, UK" },
+    { name: "India" },
+    { name: "Pakistan" }
 ];
 
 const states = [
-    "Texas", "Georgia", "Florida", "North Carolina", "New Jersey", "New York", "Connecticut", "Illinois", "Virginia", "California", "South Carolina", "Kentucky", "Missouri", "Maryland", "Indiana", "Pennsylvania"
+    "Texas", "Georgia", "Florida", "North Carolina", "New Jersey", "New York", "Connecticut", "Illinois", "Virginia", "California", "South Carolina", "Kentucky", "Missouri", "Maryland", "Indiana", "Pennsylvania", "Michigan", "Delaware", "Wisconsin"
 ];
 
 const AboutMap = () => {
