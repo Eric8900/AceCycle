@@ -20,7 +20,7 @@ function RecycledCount() {
           className="!text-7xl sm:!text-9xl font-extrabold bg-emerald-200 px-3 py-3 rounded-2xl"
         >
           <span className='bg-gradient-to-r from-lime-500 to-lime-600 bg-clip-text text-transparent'>
-            <NumberTicker value={455000} className='inline bg-gradient-to-r from-lime-500 to-lime-600 bg-clip-text text-transparent' />+
+            <NumberTicker value={455600} className='inline bg-gradient-to-r from-lime-500 to-lime-600 bg-clip-text text-transparent' />+
           </span>
         </motion.span>
       </div>

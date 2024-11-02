@@ -114,6 +114,14 @@ const data = [
   },
   {
     title: "Tennis Balls",
+    src: "https://acecycleassets.vercel.app/about_10.jpg",
+  },
+  {
+    title: "Tennis Balls",
+    src: "https://acecycleassets.vercel.app/about_11.jpg",
+  },
+  {
+    title: "Tennis Balls",
     src: "https://acecycleassets.vercel.app/about_2.jpg",
   },
   {
@@ -135,5 +143,9 @@ const data = [
   {
     title: "Tennis Balls",
     src: "https://acecycleassets.vercel.app/about_7.jpg",
+  },
+  {
+    title: "Tennis Balls",
+    src: "https://acecycleassets.vercel.app/about_12.jpg",
   },
 ];
