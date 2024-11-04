@@ -107,45 +107,12 @@ const content = [
   },
 ];
 
-const data = [
-  {
+const numbersToSkip = [8, 9];
+const data = Array.from({ length: 18 })
+  .map((_, i) => i + 1)
+  .filter(num => !numbersToSkip.includes(num))
+  .map(num => ({
     title: "Tennis Balls",
-    src: "https://acecycleassets.vercel.app/about_3.jpg",
-  },
-  {
-    title: "Tennis Balls",
-    src: "https://acecycleassets.vercel.app/about_10.jpg",
-  },
-  {
-    title: "Tennis Balls",
-    src: "https://acecycleassets.vercel.app/about_11.jpg",
-  },
-  {
-    title: "Tennis Balls",
-    src: "https://acecycleassets.vercel.app/about_2.jpg",
-  },
-  {
-    title: "Tennis Balls",
-    src: "https://acecycleassets.vercel.app/about_1.jpg",
-  },
-  {
-    title: "Tennis Balls",
-    src: "https://acecycleassets.vercel.app/about_4.jpg",
-  },
-  {
-    title: "Tennis Balls",
-    src: "https://acecycleassets.vercel.app/about_5.jpg",
-  },
-  {
-    title: "Tennis Balls",
-    src: "https://acecycleassets.vercel.app/about_6.jpg",
-  },
-  {
-    title: "Tennis Balls",
-    src: "https://acecycleassets.vercel.app/about_7.jpg",
-  },
-  {
-    title: "Tennis Balls",
-    src: "https://acecycleassets.vercel.app/about_12.jpg",
-  },
-];
+    src: `https://acecycleassets.vercel.app/about_${num}.jpg`
+  }))
+  .sort(() => Math.random() - 0.5);
