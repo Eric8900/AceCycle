@@ -1,27 +1,40 @@
 import { useState, useEffect, MouseEvent } from "react"
 import { NavigationMenuLink, NavigationMenuList, NavigationMenu } from "@/components/ui/navigation-menu"
+import { useLocation } from 'react-router-dom';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const location = useLocation();
 
   useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash
-      if (hash) {
-        setTimeout(() => {
-          const element = document.querySelector(hash)
-          if (element) element.scrollIntoView({ behavior: 'smooth' })
-        }, 100)
-      }
+    if (location.hash) {
+      setTimeout(() => {
+        const element = document.querySelector(location.hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
     }
+  }, [location]);
 
-    window.addEventListener('hashchange', handleHashChange)
-    window.addEventListener('load', handleHashChange)
-    return () => {
-      window.removeEventListener('hashchange', handleHashChange)
-      window.removeEventListener('load', handleHashChange)
-    }
-  }, [])
+  // useEffect(() => {
+  //   const handleHashChange = () => {
+  //     const hash = window.location.hash
+  //     if (hash) {
+  //       setTimeout(() => {
+  //         const element = document.querySelector(hash)
+  //         if (element) element.scrollIntoView({ behavior: 'smooth' })
+  //       }, 100)
+  //     }
+  //   }
+
+  //   window.addEventListener('hashchange', handleHashChange)
+  //   window.addEventListener('load', handleHashChange)
+  //   return () => {
+  //     window.removeEventListener('hashchange', handleHashChange)
+  //     window.removeEventListener('load', handleHashChange)
+  //   }
+  // }, [])
 
   useEffect(() => {
     if (isOpen) {

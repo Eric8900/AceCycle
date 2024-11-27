@@ -1,14 +1,17 @@
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import Contact from "./components/Contact"
+import { BrowserRouter } from "react-router-dom"
 
 function ContactApp() {
 
   return (
     <>
-      <Navbar/>
-      <Contact/>
-      <Footer/>
+      <BrowserRouter>
+        <Navbar />
+      </BrowserRouter>
+      <Contact />
+      <Footer />
     </>
   )
 }

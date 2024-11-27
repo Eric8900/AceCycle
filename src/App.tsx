@@ -5,18 +5,21 @@ import { About } from "./components/About"
 import Footer from "./components/Footer"
 import FeaturedPublications from "./components/Publications"
 import CallToAction from "./components/CallToAction"
+import { BrowserRouter } from "react-router-dom"
 
 function App() {
 
   return (
     <>
-      <Navbar />
+      <BrowserRouter>
+        <Navbar />
+      </BrowserRouter>
       <Hero />
       <div id="partners">
         <RecycledCount />
       </div>
       <div id="research">
-      <FeaturedPublications />
+        <FeaturedPublications />
       </div>
       <About />
       <CallToAction />
