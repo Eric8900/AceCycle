@@ -9,12 +9,16 @@ function AboutApp() {
 
   return (
     <>
-      <Navbar/>
-      <AboutHero/>
-      <VisionStatement/>
-      <AboutMap/>
-      <AboutTeam/>
-      <Footer/>
+      <Navbar />
+      <AboutHero />
+      <VisionStatement />
+      <div id="startchapter" className="my-[30vh]">
+        <AboutMap />
+      </div>
+      <div id="team" className="mt-[30vh]">
+        <AboutTeam />
+      </div>
+      <Footer />
     </>
   )
 }

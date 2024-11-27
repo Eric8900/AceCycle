@@ -1,45 +1,69 @@
+import { NavigationMenu, NavigationMenuList, NavigationMenuLink } from '@/components/ui/navigation-menu';
+
 function Footer() {
-    return (
-      <>
-        <footer className="py-6 border-[1px] border-t-lime-400">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row items-center justify-between">
-              <div className="mb-4 md:mb-0">
-                <a href="/">
-                  <img
-                    src="/AceCycleLogo.png"
-                    alt="Logo"
-                    className="h-16 w-18"
-                  />
+  const links = [
+    { href: "/", text: "Home" },
+    { href: "/#partners", text: "Partners" },
+    { href: "/#research", text: "Research" },
+    { href: "/#gallery", text: "Gallery" },
+    { href: "/#about", text: "Mission" },
+    { href: "/about/", text: "About" },
+    { href: "/about/#team", text: "Our Team" },
+    { href: "/#acecycleapp", text: "AceCycle App" },
+    { href: "/contact/", text: "Contact Us" }
+  ];
+
+  return (
+    <footer className="relative">
+      <div className="container mx-auto px-6 py-12">
+        <div className="rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg p-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="flex justify-center md:justify-start">
+              <a href="/" className="block">
+                <img src="/AceCycleLogo.png" alt="AceCycle" className="h-32 w-36" />
+              </a>
+            </div>
+
+            <div className="flex gap-8 justify-between items-start md:grid md:grid-cols-2 text-left sm:mx-[20%] mx-[10%] md:mx-0">
+              <NavigationMenu className="flex justify-start">
+                <NavigationMenuList className="flex flex-col gap-3 items-start">
+                  {links.slice(0, 5).map((link) => (
+                    <NavigationMenuLink asChild key={link.href}>
+                      <a href={link.href} className="text-gray-600 hover:text-lime-600 transition-colors !m-0">{link.text}</a>
+                    </NavigationMenuLink>
+                  ))}
+                </NavigationMenuList>
+              </NavigationMenu>
+              
+              <NavigationMenu className="flex justify-start">
+                <NavigationMenuList className="flex flex-col gap-3 items-start">
+                  {links.slice(5).map((link) => (
+                    <NavigationMenuLink asChild key={link.href}>
+                      <a href={link.href} className="text-gray-600 hover:text-lime-600 transition-colors !m-0">{link.text}</a>
+                    </NavigationMenuLink>
+                  ))}
+                </NavigationMenuList>
+              </NavigationMenu>
+            </div>
+
+            <div className="space-y-6">
+              <div className="bg-gray-50 p-6 rounded-xl text-center md:text-left">
+                <h3 className="text-xl font-bold mb-2">Ready to make an impact?</h3>
+                <a href="/about/#startchapter" className="inline-flex items-center justify-center px-6 py-3 w-full text-lg font-bold bg-gradient-to-r from-lime-400 to-lime-600 text-white rounded-lg hover:from-lime-700 hover:to-lime-800 transition-colors">
+                  Start a Chapter
                 </a>
               </div>
-              <div className="md:flex hidden text-sm">© Copyright AceCycle 2024.&nbsp;&nbsp;All Rights Reserved.</div>
-              <div className="flex space-x-4">
-                <a
-                  href="/"
-                  className="text-gray-900 transition-all hover:text-gray-500"
-                >
-                  Home
-                </a>
-                <a
-                  href="/about/"
-                  className="text-gray-900 transition-all hover:text-gray-500"
-                >
-                  About
-                </a>
-                <a
-                  href="/contact/"
-                  className="text-gray-900 transition-all hover:text-gray-500"
-                >
-                  Contact
-                </a>
-              </div>
-              <div className="md:hidden flex text-sm mt-10">© Copyright AceCycle 2024.&nbsp;&nbsp;All Rights Reserved.</div>
             </div>
           </div>
-        </footer>
-      </>
-    );
-  }
-  
-  export default Footer;
+
+          <div className="mt-8 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+            <p className="text-sm text-gray-600">Made with ❤️️ from Katy</p>
+            <p className="text-sm text-gray-600">© {new Date().getFullYear()} AceCycle. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+export default Footer;

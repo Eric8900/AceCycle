@@ -10,13 +10,17 @@ function App() {
 
   return (
     <>
-      <Navbar/>
-      <Hero/>
-      <RecycledCount/>
-      <FeaturedPublications/>
-      <About/>
-      <CallToAction/>
-      <Footer/>
+      <Navbar />
+      <Hero />
+      <div id="partners">
+        <RecycledCount />
+      </div>
+      <div id="research">
+      <FeaturedPublications />
+      </div>
+      <About />
+      <CallToAction />
+      <Footer />
     </>
   )
 }

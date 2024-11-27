@@ -1,91 +1,133 @@
-import { Button } from "@/components/ui/button"
-import { SheetTrigger, SheetContent, Sheet } from "@/components/ui/sheet"
+import { useState, useEffect, MouseEvent } from "react"
 import { NavigationMenuLink, NavigationMenuList, NavigationMenu } from "@/components/ui/navigation-menu"
-import { SVGProps } from "react"
-import { JSX } from "react/jsx-runtime"
 
 function Navbar() {
-  function MenuIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
-    return (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="#579124"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <line x1="4" x2="20" y1="12" y2="12" />
-        <line x1="4" x2="20" y1="6" y2="6" />
-        <line x1="4" x2="20" y1="18" y2="18" />
-      </svg>
-    )
+  const [isOpen, setIsOpen] = useState(false)
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash
+      if (hash) {
+        setTimeout(() => {
+          const element = document.querySelector(hash)
+          if (element) element.scrollIntoView({ behavior: 'smooth' })
+        }, 100)
+      }
+    }
+
+    window.addEventListener('hashchange', handleHashChange)
+    window.addEventListener('load', handleHashChange)
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange)
+      window.removeEventListener('load', handleHashChange)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [isOpen])
+
+  const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
+    setIsOpen(false)
+    if (href.includes('#') && window.location.pathname === href.split('#')[0]) {
+      e.preventDefault()
+      const element = document.querySelector(`#${href.split('#')[1]}`)
+      if (element) element.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 
   return (
     <div className="w-full flex lg:items-center lg:justify-center">
-    {/* MOBILE */}
-      <header className="lg:hidden flex fixed z-20 items-center h-20 w-full bg-white shrink-0 px-4 md:px-6">
-        <Sheet>
-          <SheetTrigger asChild>
-            <Button className="lg:hidden border-0 shadow-none" size="icon" variant="outline">
-              <MenuIcon className="h-12 w-12" />
-              <span className="sr-only">Toggle navigation menu</span>
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="left">
-            <a href="/">
-              <img className='h-16 w-18' src='/AceCycleLogo.png'/>
-              <span className="sr-only">AceCycle</span>
-            </a>
-            <div className="grid gap-2 py-6">
-              <a className="flex w-full items-center py-2 text-lg font-semibold" href="/">
-                Home
+      {/* MOBILE */}
+      <header className={`lg:hidden w-full absolute ${isOpen ? "bg-white" : "bg-transparent"} py-4 px-8 z-[100]`}>
+        <div className="flex items-center justify-between h-20 pr-4">
+          <a href="/">
+            <img className="h-16 w-18" src="/AceCycleLogo.png" alt="AceCycle" />
+          </a>
+          <button onClick={() => setIsOpen(!isOpen)} className="relative w-8 h-8">
+            <span className={`absolute top-1/2 left-1/2 -translate-x-1/2 h-0.5 w-8 bg-black transform transition-all duration-300 ease-in-out ${isOpen ? "rotate-45" : "-translate-y-1"}`} />
+            <span className={`absolute top-1/2 left-1/2 -translate-x-1/2 h-0.5 w-8 bg-black transform transition-all duration-300 ease-in-out ${isOpen ? "-rotate-45" : "translate-y-1"}`} />
+          </button>
+        </div>
+
+        <nav className={`absolute flex items-center justify-center top-24 right-0 h-screen w-full bg-white transform transition-all duration-300 ease-in-out ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}>
+          <div className="flex flex-col items-center justify-center gap-8 text-3xl font-light mb-[20%]">
+            {[
+              { href: "/", text: "Home" },
+              { href: "/#partners", text: "Partners" },
+              { href: "/#research", text: "Research" },
+              { href: "/#gallery", text: "Gallery" },
+              { href: "/#about", text: "Mission" },
+              { href: "/about/", text: "About" },
+              { href: "/about/#team", text: "Our Team" },
+              { href: "/#acecycleapp", text: "AceCycle App" },
+              { href: "/contact/", text: "Contact Us" },
+              { href: "/about/#startchapter", text: "Start a Chapter" }
+            ].map((link, index) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={(e) => handleLinkClick(e, link.href)}
+                className="transform transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full"
+                style={{
+                  opacity: isOpen ? 1 : 0,
+                  transform: `translateY(${isOpen ? 0 : '20px'})`,
+                  transitionDelay: `${index * 50}ms`
+                }}
+              >
+                {link.text}
               </a>
-              <a className="flex w-full items-center py-2 text-lg font-semibold" href="/about/">
-                About
-              </a>
-              <a className="flex w-full items-center py-2 text-lg font-semibold" href="/contact/">
-                Contact
-              </a>
-            </div>
-          </SheetContent>
-        </Sheet>
+            ))}
+          </div>
+        </nav>
       </header>
       {/* LARGE SCREENS */}
-      <header className="hidden lg:flex fixed z-20 items-center justify-center mt-24 h-20 w-fit rounded-2xl border-[#579124] border-[0.5px] bg-white shrink-0 px-4 md:px-6">
-        <a className="mr-6 " href="/">
-          <img className='h-16 w-18' src='/AceCycleLogo.png'/>
+      <header className="hidden absolute mt-[15%] lg:flex m-6 justify-between w-full rounded-2xl backdrop-blur-sm px-4 md:px-16 z-[100]">
+        <a className="mr-6" href="/">
+          <img className='h-32 w-36' src='/AceCycleLogo.png' />
           <span className="sr-only">AceCycle</span>
         </a>
         <NavigationMenu>
-          <NavigationMenuList>
+          <NavigationMenuList className="gap-4">
+            {[
+              { href: "/", text: "Home" },
+              { href: "/#partners", text: "Partners" },
+              { href: "/#research", text: "Research" },
+              { href: "/#gallery", text: "Gallery" },
+              { href: "/#about", text: "Mission" },
+              { href: "/about/", text: "About" },
+              { href: "/about/#team", text: "Our Team" },
+              { href: "/#acecycleapp", text: "AceCycle App" },
+              { href: "/contact/", text: "Contact Us" },
+            ].map((link) => (
+              <NavigationMenuLink asChild>
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={(e) => handleLinkClick(e, link.href)}
+                  className="group inline-flex h-9 w-max items-center justify-center bg-transparent py-2 text-lg font-light transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full"
+                >
+                  {link.text}
+                </a>
+              </NavigationMenuLink>
+            ))}
             <NavigationMenuLink asChild>
               <a
-                className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
-                href="/"
+                href="/about/#startchapter"
+                key="/about/#startchapter"
+                onClick={(e) => handleLinkClick(e, "/about/#startchapter")}
+                className="group inline-flex h-9 w-max items-center justify-center bg-transparent py-2 text-lg font-bold bg-gradient-to-r from-lime-600 to-lime-700 bg-clip-text text-transparent transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full"
               >
-                Home
-              </a>
-            </NavigationMenuLink>
-            <NavigationMenuLink asChild>
-              <a
-                className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
-                href="/about/"
-              >
-                About
-              </a>
-            </NavigationMenuLink>
-            <NavigationMenuLink asChild>
-              <a
-                className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
-                href="/contact/"
-              >
-                Contact
+                Start a Chapter
               </a>
             </NavigationMenuLink>
           </NavigationMenuList>

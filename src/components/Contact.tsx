@@ -23,8 +23,8 @@ const formSchema = z.object({
   name: z.string().min(1, {
     message: "Enter a name!",
   }),
-  email: z.string().min(1, { 
-    message: "This field has to be filled!" 
+  email: z.string().min(1, {
+    message: "This field has to be filled!"
   }).email("This is not a valid email."),
   message: z.string().min(1, {
     message: "Enter a message!",
@@ -55,58 +55,58 @@ function Contact() {
   }
   return (
     <>
-    <img src="/blurry-gradient-haikei.svg" className="absolute w-full h-screen object-cover z-[-1] border-b-[1px] border-lime-400"/>
-    <div className="h-screen flex justify-center items-center flex-col">
-    <div className="m-16 text-center">
-    <h1 className="text-gray-800 md:text-9xl text-7xl font-extrabold">Contact Us</h1>
-    <p className="opacity-80 text-gray-700 md:text-xl text-lg">Any questions or concerns?</p>
-    </div>
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 w-4/5 lg:w-3/5 rounded-2xl border-2 shadow-2xl lg:py-10 lg:px-24 py-4 px-8">
-        <FormField
-          control={form.control}
-          name="name"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Name</FormLabel>
-              <FormControl>
-                <Input placeholder="John Doe" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email</FormLabel>
-              <FormControl>
-                <Input placeholder="johndoe@gmail.com" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="message"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Message</FormLabel>
-              <FormControl>
-                <Textarea placeholder="Type your message here" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <Button type="submit" className="w-full">Submit</Button>
-      </form>
-    </Form>
-    </div>
-    <Toaster />
+      <img src="/blurry-gradient-haikei.svg" className="absolute w-full h-[150vh] object-cover z-[-1] border-b-[1px] border-lime-100" />
+      <div className="h-[150vh] flex justify-center items-center flex-col">
+        <div className="m-16 text-center flex flex-col justify-center items-center">
+          <h1 className="text-gray-800 md:text-8xl text-5xl font-extrabold">Contact Us</h1>
+          <p className="opacity-80 text-gray-700 md:text-xl text-lg font-light mt-4 max-w-sm">Want to know more about our mission? Have questions about creating a chapter? Ask us anything</p>
+        </div>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 w-4/5 lg:w-3/5 rounded-2xl border-2 shadow-2xl lg:py-10 lg:px-24 py-4 px-8">
+            <FormField
+              control={form.control}
+              name="name"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Name</FormLabel>
+                  <FormControl>
+                    <Input placeholder="John Doe" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Email</FormLabel>
+                  <FormControl>
+                    <Input placeholder="johndoe@gmail.com" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="message"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Message</FormLabel>
+                  <FormControl>
+                    <Textarea placeholder="Type your message here" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <Button type="submit" className="w-full">Send</Button>
+          </form>
+        </Form>
+      </div>
+      <Toaster />
     </>
   )
 }

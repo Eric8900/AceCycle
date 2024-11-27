@@ -5,7 +5,7 @@ const CallToAction = () => {
 
     return (
         <div className='flex justify-center items-center w-full my-32'>
-            <div className="flex justify-center items-center relative ring-1 ring-gray-300 w-[90%] sm:w-[70%] md:w-[65%] lg:w-[50%] overflow-hidden bg-white rounded-xl p-12">
+            <div className="flex justify-center items-center relative drop-shadow-xl w-[90%] sm:w-[70%] md:w-[65%] lg:w-[50%] overflow-hidden bg-white rounded-xl p-12">
                 {/* Animated rows */}
                 <div className="absolute rotate-[35deg] space-y-5 w-max">
                     <Marquee className="[--duration:30s]">

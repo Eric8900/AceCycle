@@ -115,7 +115,6 @@ export const Header = () => {
         >
           <Button className="max-w-2xl rounded-xl text-xl md:text-3xl md:p-8 p-6 dark:text-neutral-200">
             Learn More
-
           </Button>
         </a>
       </BlurIn>

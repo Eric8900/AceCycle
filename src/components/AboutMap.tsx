@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef, useEffect } from 'react';
 import { ComposableMap, Geographies, Geography, Marker } from "react-simple-maps";
+import { FlipWords } from './ui/flip-words';
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
 
@@ -48,6 +49,7 @@ const states = [
 ];
 
 const AboutMap = () => {
+    const words = ["state", "national", "global"];
     const [hoveredCity, setHoveredCity] = useState("");
     const mapRef = useRef(null);
     const scrollRef = useRef<HTMLDivElement | null>(null);
@@ -96,8 +98,10 @@ const AboutMap = () => {
 
     return (
         <div className="flex flex-col justify-center items-center w-full max-w-5xl overflow-visible mx-auto my-36 relative" ref={mapRef}>
-            <h1 className="text-gray-800 md:text-7xl text-5xl font-extrabold text-center my-10">Our Locations</h1>
-
+            <div className='flex flex-col justify-center items-center my-32 gap-5'>
+                <h1 className="text-gray-800 text-7xl font-extrabold text-center">Our Locations</h1>
+                <p className="opacity-80 text-gray-700 text-4xl font-light text-center">Recycling balls on the<FlipWords words={words} className='font-extrabold text-[#84cc16]'/>level</p>
+            </div>
             {/* International Locations Section */}
             <div className="w-full text-center mb-10">
                 <h2 className="text-3xl font-bold mb-4"><b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">International</b> Locations</h2>
@@ -133,9 +137,9 @@ const AboutMap = () => {
                         geographies.map((geo) => {
                             const cur = states.find(c => c === geo.properties.name);
                             return (
-                                <a 
-                                href={`mailto:nishantg2706@gmail.com?subject=AceCycle%3A%20Creating%20a%20New%20Chapter%20in%20%5BName%20Your%20City%5D%2C%20${geo.properties.name}&body=Hello%2C%0A%0AI%20would%20like%20to%20learn%20more%20about%20creating%20a%20new%20chapter%20for%20AceCycle.%20Could%20you%20please%20provide%20more%20information%20regarding%20how%20to%20get%20started%3F%20%0A%0AThank%20you!`} 
-                                target="_blank" rel="noopener noreferrer">
+                                <a
+                                    href={`mailto:nishantg2706@gmail.com?subject=AceCycle%3A%20Creating%20a%20New%20Chapter%20in%20%5BName%20Your%20City%5D%2C%20${geo.properties.name}&body=Hello%2C%0A%0AI%20would%20like%20to%20learn%20more%20about%20creating%20a%20new%20chapter%20for%20AceCycle.%20Could%20you%20please%20provide%20more%20information%20regarding%20how%20to%20get%20started%3F%20%0A%0AThank%20you!`}
+                                    target="_blank" rel="noopener noreferrer">
                                     <Geography
                                         key={geo.rsmKey}
                                         geography={geo}
@@ -184,14 +188,14 @@ const AboutMap = () => {
                     <p className="text-3xl font-semibold text-gray-800">{hoveredCity}</p>
                 )}
             </div>
-            <h1 className='text-3xl font-bold mt-16'>Want to create a chapter?</h1>
+            <h1 className='text-3xl font-bold mt-16'>Want to start a chapter?</h1>
             <h1 className='font-light'>
                 Click on your state or email&nbsp;
                 <span>
-                    <a 
-                    target="_blank" rel="noopener noreferrer"
-                    href='mailto:nishantg2706@gmail.com?subject=AceCycle%3A%20Creating%20a%20New%20Chapter%20in%20%5BName%20Your%20City%5D%2C%20%5BName%20Your%20State%5D&body=Hello%2C%0A%0AI%20would%20like%20to%20learn%20more%20about%20creating%20a%20new%20chapter%20for%20AceCycle.%20Could%20you%20please%20provide%20more%20information%20regarding%20how%20to%20get%20started%3F%20%0A%0AThank%20you!' 
-                    className='text-lime-500 hover:text-lime-600'>
+                    <a
+                        target="_blank" rel="noopener noreferrer"
+                        href='mailto:nishantg2706@gmail.com?subject=AceCycle%3A%20Creating%20a%20New%20Chapter%20in%20%5BName%20Your%20City%5D%2C%20%5BName%20Your%20State%5D&body=Hello%2C%0A%0AI%20would%20like%20to%20learn%20more%20about%20creating%20a%20new%20chapter%20for%20AceCycle.%20Could%20you%20please%20provide%20more%20information%20regarding%20how%20to%20get%20started%3F%20%0A%0AThank%20you!'
+                        className='text-lime-500 hover:text-lime-600'>
                         nishantg2706@gmail.com
                     </a>
                 </span>
