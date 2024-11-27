@@ -23,7 +23,9 @@ function App() {
       </div>
       <About />
       <CallToAction />
-      <Footer />
+      <BrowserRouter>
+        <Footer />
+      </BrowserRouter>
     </>
   )
 }

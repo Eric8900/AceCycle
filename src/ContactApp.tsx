@@ -11,7 +11,9 @@ function ContactApp() {
         <Navbar />
       </BrowserRouter>
       <Contact />
-      <Footer />
+      <BrowserRouter>
+        <Footer />
+      </BrowserRouter>
     </>
   )
 }

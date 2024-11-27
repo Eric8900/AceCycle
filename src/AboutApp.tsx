@@ -21,7 +21,9 @@ function AboutApp() {
       <div id="team" className="mt-[30vh]">
         <AboutTeam />
       </div>
-      <Footer />
+      <BrowserRouter>
+        <Footer />
+      </BrowserRouter>
     </>
   )
 }

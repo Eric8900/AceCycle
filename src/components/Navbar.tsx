@@ -2,39 +2,46 @@ import { useState, useEffect, MouseEvent } from "react"
 import { NavigationMenuLink, NavigationMenuList, NavigationMenu } from "@/components/ui/navigation-menu"
 import { useLocation } from 'react-router-dom';
 
+function useWindowSize() {
+  const [windowSize, setWindowSize] = useState({
+    height: window.innerHeight
+  });
+  
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        height: window.innerHeight,
+      });
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return windowSize;
+}
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const location = useLocation();
+  const mobileHeaderHeight = useWindowSize().height;
 
   useEffect(() => {
     if (location.hash) {
       setTimeout(() => {
         const element = document.querySelector(location.hash);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+          const isMobile = window.innerWidth < 1024; // lg breakpoint
+          const offset = isMobile ? -mobileHeaderHeight : 0;
+          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({
+            top: elementPosition + offset,
+            behavior: 'smooth'
+          });
         }
       }, 100);
     }
   }, [location]);
-
-  // useEffect(() => {
-  //   const handleHashChange = () => {
-  //     const hash = window.location.hash
-  //     if (hash) {
-  //       setTimeout(() => {
-  //         const element = document.querySelector(hash)
-  //         if (element) element.scrollIntoView({ behavior: 'smooth' })
-  //       }, 100)
-  //     }
-  //   }
-
-  //   window.addEventListener('hashchange', handleHashChange)
-  //   window.addEventListener('load', handleHashChange)
-  //   return () => {
-  //     window.removeEventListener('hashchange', handleHashChange)
-  //     window.removeEventListener('load', handleHashChange)
-  //   }
-  // }, [])
 
   useEffect(() => {
     if (isOpen) {
@@ -53,11 +60,20 @@ function Navbar() {
     if (href.includes('#') && window.location.pathname === href.split('#')[0]) {
       e.preventDefault()
       const element = document.querySelector(`#${href.split('#')[1]}`)
-      if (element) element.scrollIntoView({ behavior: 'smooth' })
+      if (element) {
+        const isMobile = window.innerWidth < 1024;
+        const offset = isMobile ? -mobileHeaderHeight : 0;
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: elementPosition + offset,
+          behavior: 'smooth'
+        });
+      }
     }
   }
 
   return (
+    // Rest of the component remains unchanged
     <div className="w-full flex lg:items-center lg:justify-center">
       {/* MOBILE */}
       <header className={`lg:hidden w-full ${isOpen ? "bg-white" : "bg-transparent"} py-4 px-8 z-[100]`}>

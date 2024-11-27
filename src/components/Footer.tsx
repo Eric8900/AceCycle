@@ -1,4 +1,6 @@
 import { NavigationMenu, NavigationMenuList, NavigationMenuLink } from '@/components/ui/navigation-menu';
+import { useEffect, MouseEvent } from 'react';
+import { useLocation } from 'react-router-dom';
 
 function Footer() {
   const links = [
@@ -12,6 +14,26 @@ function Footer() {
     { href: "/#acecycleapp", text: "AceCycle App" },
     { href: "/contact/", text: "Contact Us" }
   ];
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      setTimeout(() => {
+        const element = document.querySelector(location.hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [location]);
+
+  const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.includes('#') && window.location.pathname === href.split('#')[0]) {
+      e.preventDefault()
+      const element = document.querySelector(`#${href.split('#')[1]}`)
+      if (element) element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
 
   return (
     <footer className="relative">
@@ -29,17 +51,27 @@ function Footer() {
                 <NavigationMenuList className="flex flex-col gap-3 items-start">
                   {links.slice(0, 5).map((link) => (
                     <NavigationMenuLink asChild key={link.href}>
-                      <a href={link.href} className="text-gray-600 hover:text-lime-600 transition-colors !m-0">{link.text}</a>
+                      <a
+                        href={link.href}
+                        onClick={(e) => handleLinkClick(e, link.href)}
+                        className="text-gray-600 hover:text-lime-600 transition-colors !m-0">
+                        {link.text}
+                      </a>
                     </NavigationMenuLink>
                   ))}
                 </NavigationMenuList>
               </NavigationMenu>
-              
+
               <NavigationMenu className="flex justify-start">
                 <NavigationMenuList className="flex flex-col gap-3 items-start">
                   {links.slice(5).map((link) => (
                     <NavigationMenuLink asChild key={link.href}>
-                      <a href={link.href} className="text-gray-600 hover:text-lime-600 transition-colors !m-0">{link.text}</a>
+                      <a
+                        href={link.href}
+                        onClick={(e) => handleLinkClick(e, link.href)}
+                        className="text-gray-600 hover:text-lime-600 transition-colors !m-0">
+                        {link.text}
+                      </a>
                     </NavigationMenuLink>
                   ))}
                 </NavigationMenuList>
@@ -49,7 +81,11 @@ function Footer() {
             <div className="space-y-6">
               <div className="bg-gray-50 p-6 rounded-xl text-center md:text-left">
                 <h3 className="text-xl font-bold mb-2">Ready to make an impact?</h3>
-                <a href="/about/#startchapter" className="inline-flex items-center justify-center px-6 py-3 w-full text-lg font-bold bg-gradient-to-r from-lime-400 to-lime-600 text-white rounded-lg hover:from-lime-700 hover:to-lime-800 transition-colors">
+                <a
+                  href="/about/#startchapter"
+                  onClick={(e) => handleLinkClick(e, "/about/#startchapter")}
+                  className="inline-flex items-center justify-center px-6 py-3 w-full text-lg font-bold bg-gradient-to-r from-lime-400 to-lime-600 text-white rounded-lg hover:from-lime-700 hover:to-lime-800 transition-colors"
+                >
                   Start a Chapter
                 </a>
               </div>
