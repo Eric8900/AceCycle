@@ -47,7 +47,7 @@ function Navbar() {
   return (
     <div className="w-full flex lg:items-center lg:justify-center">
       {/* MOBILE */}
-      <header className={`lg:hidden w-full absolute ${isOpen ? "bg-white" : "bg-transparent"} py-4 px-8 z-[100]`}>
+      <header className={`lg:hidden w-full ${isOpen ? "bg-white" : "bg-transparent"} py-4 px-8 z-[100]`}>
         <div className="flex items-center justify-between h-20 pr-4">
           <a href="/">
             <img className="h-16 w-18" src="/AceCycleLogo.png" alt="AceCycle" />
@@ -58,9 +58,8 @@ function Navbar() {
           </button>
         </div>
 
-        <nav className={`absolute flex items-center justify-center top-24 right-0 h-screen w-full bg-white transform transition-all duration-300 ease-in-out ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"
-          }`}>
-          <div className="flex flex-col items-center justify-center gap-8 text-3xl font-light mb-[20%]">
+        <nav className={`w-full bg-white transform transition-all duration-300 ease-in-out ${isOpen ? "h-screen opacity-100 visible" : "h-0 opacity-0 invisible"}`}>
+          <div className="flex flex-col items-center gap-3 text-3xl font-light py-8">
             {[
               { href: "/", text: "Home" },
               { href: "/#partners", text: "Partners" },
