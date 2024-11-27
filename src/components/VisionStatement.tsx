@@ -7,7 +7,7 @@ function VisionStatement() {
         <div className="flex flex-col justify-center h-screen w-full md:px-[20%] px-[5%]">
           <h1 className="text-white md:text-[4.5rem] text-[4rem] leading-[1] font-extrabold brightness-100 opacity-100">Vision Statement</h1>
           <p className="text-white text-lg brightness-100 opacity-100">
-          We envision a world where sustainability is interwoven with every aspect of our lives, including the sports we love. In our ideal future, no tennis ball ends its journey in a landfill, but rather contributes to a cycle of continuous reuse and repurposing. Our vision extends beyond recycling; it's about changing the narrative around waste and inspiring communities to adopt more environmentally conscious practices. We dream of expanding our reach, not just within our local communities but across the globe, to create a network of tennis enthusiasts and environmental advocates working together for a greener tomorrow.
+            Imagine a world where sustainability will be synonymous with every part of our lives, including the sport we adore. That was what we first envisioned when we started AceCycle. In a perfect future, no tennis ball has to land in a landfill; instead, it takes part in a circle of non-stop reuse and repurposing. Our vision is one beyond recycling but changing the way people talk about trash and building communities that have a deep understanding of the environment. We strive to not only reach local communities but worldwide to develop a wide connection with all tennis players collaborating in efforts toward a greener tomorrow.
           </p>
         </div>
       </>

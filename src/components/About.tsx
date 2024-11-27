@@ -85,7 +85,7 @@ const content = [
     title: "Our Story",
     description: (
       <>
-        Our journey began on the sunlit courts of Austin, Sugar Land, and Katy, Texas, where we, a group of avid tennis players and students, discovered a shared passion not just for the game, but for the environment that surrounds it. United by our love for tennis and a growing concern for sustainable practices, we noticed the abundance of tennis balls that were deemed no longer playable and destined for landfills. We saw potential where others saw waste. Driven by a spirit of innovation and environmental stewardship, we embarked on a mission to give these tennis balls a second life. Thus, our nonprofit was born out of the belief that we could make a difference, one tennis ball at a time.
+        Our journey began on the sunny courts of Austin, Sugar Land, and Katy, Texas, where a group of avid tennis players and students found a shared passion not just for the game, but for the environment that surrounds it. United in our love of tennis and an increasing sensitivity to the environment, we started to realize how many tennis balls were considered "no longer playable" and were sent to landfills. We saw potential where others saw waste. In an innovative and environmentally friendly manner, we sought to give these tennis balls a second life. Thus, our nonprofit was born out of the belief that we could make a difference, one tennis ball at a time.
       </>
     ),
     image:
@@ -95,7 +95,7 @@ const content = [
     title: "Our Vision",
     description: (
       <>
-        We envision a world where sustainability is interwoven with every aspect of our lives, including the sports we love. In our ideal future, no tennis ball ends its journey in a landfill, but rather contributes to a cycle of continuous reuse and repurposing. Our vision extends beyond recycling; it's about changing the narrative around waste and inspiring communities to adopt more environmentally conscious practices. We dream of expanding our reach, not just within our local communities but across the globe, to create a network of tennis enthusiasts and environmental advocates working together for a greener tomorrow.
+        Imagine a world where sustainability will be synonymous with every part of our lives, including the sport we adore. That was what we first envisioned when we started AceCycle. In a perfect future, no tennis ball has to land in a landfill; instead, it takes part in a circle of non-stop reuse and repurposing. Our vision is one beyond recycling but changing the way people talk about trash and building communities that have a deep understanding of the environment. We strive to not only reach local communities but worldwide to develop a wide connection with all tennis players collaborating in efforts toward a greener tomorrow.
       </>
     ),
     image:
@@ -105,7 +105,7 @@ const content = [
     title: "Our Mission",
     description: (
       <>
-        Our mission is simple yet ambitious: to recycle and repurpose tennis balls, reducing environmental waste and promoting sustainability within the tennis community and beyond. We are committed to collecting used tennis balls from clubs, schools, and public courts, diverting them from landfills, and finding innovative ways to give them a new lease on life. Whether it's through creating new tennis court surfaces, designing dog toys, or exploring other creative uses, we are dedicated to finding solutions that benefit our planet. Through education, community engagement, and collaboration, we aim to raise awareness about the importance of recycling and inspire action towards a more sustainable world. Together, we can serve up a better future for our planet, one tennis ball at a time.
+        Our mission is quite simple yet ambitious at scale: to recycle and repurpose tennis balls in order to reduce environmental waste and promote sustainability within the tennis community and beyond. We are dedicated to collecting used tennis balls from clubs, schools, and public courts to divert them from landfills into innovative ways of giving them a new lease on life. Be it innovating new tennis court surfaces, designing dog toys, or further uses in other creative manners, we pledge our efforts to seek those solutions which would help the benefitting of our planet. Together, we can serve up a better future for our planet, one tennis ball at a time.
       </>
     ),
     image:
