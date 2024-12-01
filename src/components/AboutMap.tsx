@@ -99,7 +99,7 @@ const AboutMap = () => {
     return (
         <div className="flex flex-col justify-center items-center w-full max-w-5xl overflow-visible mx-auto my-36 relative" ref={mapRef}>
             <div className='flex flex-col justify-center items-center my-32 gap-5'>
-                <h1 className="text-gray-800 text-7xl font-extrabold text-center">Our Locations</h1>
+                <h1 className="text-gray-800 text-7xl font-extrabold text-center">Our <b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">Chapters</b></h1>
                 <p className="opacity-80 text-gray-700 text-4xl font-light text-center">Recycling balls on the<FlipWords words={words} className='font-extrabold text-[#84cc16]'/>level</p>
             </div>
             {/* International Locations Section */}

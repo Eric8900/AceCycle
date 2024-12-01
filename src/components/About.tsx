@@ -12,7 +12,7 @@ export function About() {
     <div>
       <div id="gallery">
         <BlurIn margin={"-100px"} delay={0.4} className="text-center md:text-8xl text-7xl text-gray-800 py-36 mx-10">
-          What <b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">we</b> do
+          What we <b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">do</b>
         </BlurIn>
         <div className="overflow-x-hidden">
           <Carousel items={cards} />

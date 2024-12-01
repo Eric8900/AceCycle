@@ -70,7 +70,7 @@ function Contact() {
                 <FormItem>
                   <FormLabel>Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="John Doe" {...field} />
+                    <Input placeholder="Your Name" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -83,7 +83,7 @@ function Contact() {
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input placeholder="johndoe@gmail.com" {...field} />
+                    <Input placeholder="Your Email" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

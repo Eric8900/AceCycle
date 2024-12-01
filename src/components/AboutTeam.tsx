@@ -6,7 +6,7 @@ function AboutTeam() {
     return (
       <>
         <div className="flex flex-col justify-center items-center h-full w-full my-10">
-            <h1 className="text-gray-800 md:text-7xl text-6xl font-extrabold text-center">Our Team</h1>
+            <h1 className="text-gray-800 md:text-7xl text-6xl font-extrabold text-center">Meet the <b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">Team</b></h1>
             <div className="flex flex-row flex-wrap gap-10 items-center justify-center m-10">
                 {team.map((item, index) => (
                   <a href={item.linkedin}

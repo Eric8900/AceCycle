@@ -24,7 +24,7 @@ const FeaturedPublications: React.FC = () => {
                 margin={"-100px"}
                 delay={0.4}
                 className="text-center md:text-8xl text-7xl text-gray-800 py-36">
-                <b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">Our</b> Research
+                Our <b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">Research</b>
             </BlurIn>
             <div className="flex flex-col md:flex-row justify-center items-center gap-8">
                 {publications.map((pub) => (
