@@ -125,26 +125,26 @@ module.exports = {
         fifth: "moveInCircle 20s ease infinite",
       },
     },
-    plugins: [
-      require("tailwindcss-animate"),
-      addVariablesForColors,
-      function ({ addUtilities }) {
-        const newUtilities = {
-          '.scrollbar-hide': {
-            /* IE and Edge */
-            '-ms-overflow-style': 'none',
-            /* Firefox */
-            'scrollbar-width': 'none',
-            /* Safari and Chrome */
-            '&::-webkit-scrollbar': {
-              display: 'none'
-            }
+  },
+  plugins: [
+    require("tailwindcss-animate"),
+    addVariablesForColors,
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.scrollbar-hide': {
+          /* IE and Edge */
+          '-ms-overflow-style': 'none',
+          /* Firefox */
+          'scrollbar-width': 'none',
+          /* Safari and Chrome */
+          '&::-webkit-scrollbar': {
+            display: 'none'
           }
         }
-        addUtilities(newUtilities);
-      },
-    ],
-  }
+      }
+      addUtilities(newUtilities);
+    },
+  ],
 }
 
 function addVariablesForColors({ addBase, theme }: any) {
@@ -152,7 +152,7 @@ function addVariablesForColors({ addBase, theme }: any) {
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
-
+ 
   addBase({
     ":root": newVars,
   });
