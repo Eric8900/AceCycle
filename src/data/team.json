@@ -24,12 +24,6 @@
         "image": "https://acecycleassets.vercel.app/Dheeraj.jpg"
     },
     {
-        "name": "Shreyan Dey | Dallas",
-        "position": "Co-President | President of Dallas, TX",
-        "linkedin": "https://app.utrsports.net/profiles/821728",
-        "image": "https://acecycleassets.vercel.app/Shreyan.jpg"
-    },
-    {
         "name": "Laksh Mehta | Chicago",
         "position": "Co-President | President of Chicago, IL",
         "linkedin": "https://app.utrsports.net/",
@@ -46,6 +40,12 @@
         "position": "CFO, President of Philadelphia, Pennsylvania",
         "linkedin": "https://app.utrsports.net/",
         "image": "https://acecycleassets.vercel.app/Lalit.jpg"
+    },
+    {
+        "name": "Gabriel Segubiense | Sugar Land",
+        "position": "Chief Medical Officer, President of Sugar Land, TX",
+        "linkedin": "https://app.utrsports.net/profiles/1335997",
+        "image": "https://acecycleassets.vercel.app/Gabriel.jpeg"
     },
     {
         "name": "Jashan Chahal | Kingwood",
@@ -70,12 +70,6 @@
         "position": "President of Austin, TX",
         "linkedin": "https://app.utrsports.net/profiles/293893",
         "image": "https://acecycleassets.vercel.app/Sibi.jpeg"
-    },
-    {
-        "name": "Gabriel Segubiense | Sugar Land",
-        "position": "President of Sugar Land, TX",
-        "linkedin": "https://app.utrsports.net/profiles/1335997",
-        "image": "https://acecycleassets.vercel.app/Gabriel.jpeg"
     },
     {
         "name": "Aidan Xu | Katy",
