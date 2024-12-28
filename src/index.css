@@ -21,6 +21,11 @@
   animation: slide 10000s linear infinite;
 }
 
+::selection {
+  color: black;
+  background-color: #a3e635;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
