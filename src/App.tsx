@@ -6,6 +6,7 @@ import Footer from "./components/Footer"
 import FeaturedPublications from "./components/Publications"
 import CallToAction from "./components/CallToAction"
 import { BrowserRouter } from "react-router-dom"
+import Stores from "./components/Stores"
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <div id="partners">
         <RecycledCount />
       </div>
+      <Stores></Stores>
       <div id="research">
         <FeaturedPublications />
       </div>
