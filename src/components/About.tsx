@@ -85,7 +85,7 @@ const content = [
     title: "Our Story",
     description: (
       <>
-        Our journey began on the sunny courts of Austin, Sugar Land, and Katy, Texas, where a group of avid tennis players and students found a shared passion not just for the game, but for the environment that surrounds it. United in our love of tennis and an increasing sensitivity to the environment, we started to realize how many tennis balls were considered "no longer playable" and were sent to landfills. We saw potential where others saw waste. In an innovative and environmentally friendly manner, we sought to give these tennis balls a second life. Thus, our nonprofit was born out of the belief that we could make a difference, one tennis ball at a time.
+        Our journey began on the sunny courts of Austin, Sugar Land, and Katy, Texas, where a group of high school tennis players and students found a shared passion not just for the game, but for the environment that surrounds it. United in our love of tennis and an increasing sensitivity to the environment, we started to realize how many tennis balls were considered "no longer playable" and were sent to landfills. We saw potential where others saw waste. In an innovative and environmentally friendly manner, we sought to give these tennis balls a second life. Thus, our nonprofit was born out of the belief that we could make a difference, one tennis ball at a time.
       </>
     ),
     image:
