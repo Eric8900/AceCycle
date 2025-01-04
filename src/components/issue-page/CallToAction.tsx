@@ -11,7 +11,7 @@ function CallToAction() {
                     <div className='h-full flex flex-col justify-between'>
                         <div>
                             <div className='xl:text-6xl text-5xl mb-3'>
-                                Recycling is key to AceCycle's mission
+                                Sustainability is key to AceCycle's mission
                             </div>
                             <a href='/about/'>
                                 <motion.button

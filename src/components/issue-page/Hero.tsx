@@ -16,7 +16,8 @@ export default function Hero() {
 
     useEffect(() => {
         requestAnimationFrame(animate)
-    }, [])
+        console.log("hi")
+    })
 
     const getScrollProgress = () => {
         if (!stickyMask.current || !container.current) return 0;
