@@ -12,7 +12,7 @@ export default function Hero() {
     const maskSize = useTransform(
         scrollYProgress,
         [0, 1],
-        ['80%', '180%']
+        ['80%', '8000%']
     );
 
     const brightness = useTransform(
@@ -41,12 +41,15 @@ export default function Hero() {
                         autoPlay
                         muted
                         loop
+                        playsInline
+                        disablePictureInPicture
+                        onContextMenu={(e) => e.preventDefault()}
                         className="h-full w-full object-cover"
                         style={{
                             filter: useTransform(brightness, value => `brightness(${value})`)
                         }}
                     >
-                        <source src="https://videos.pexels.com/video-files/3186589/3186589-uhd_2560_1440_30fps.mp4" type="video/mp4" />
+                        <source src="https://acecycleassets.vercel.app/environmental-waste.mp4" type="video/mp4" />
                     </motion.video>
                 </motion.div>
             </div>

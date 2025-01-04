@@ -10,7 +10,7 @@ function CallToAction() {
                 <div className='h-[70vh] w-full lg:w-[50%] md:w-[70%] sm:w-[85%] bg-green-800 p-9'>
                     <div className='h-full flex flex-col justify-between'>
                         <div>
-                            <div className='xl:text-6xl text-5xl mb-3'>
+                            <div className='xl:text-6xl text-4xl mb-3'>
                                 Sustainability is key to AceCycle's mission
                             </div>
                             <a href='/about/'>
