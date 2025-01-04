@@ -15,6 +15,12 @@ const publications: Publication[] = [
         imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Closeup_of_a_tennis_ball_%282%29.jpg/640px-Closeup_of_a_tennis_ball_%282%29.jpg',
         pdfUrl: 'https://www.preprints.org/manuscript/202410.0609/v2',
     },
+    {
+        id: '2',
+        title: 'AceCycleManager: Tool for stores to manage tennis ball inventory, usage, and carbon emissions',
+        imageUrl: 'https://github.com/Nishant27-2006/AceCycleManager/raw/main/homepage.png',
+        pdfUrl: 'https://github.com/Nishant27-2006/AceCycleManager',
+    },
 ];
 
 const FeaturedPublications: React.FC = () => {
