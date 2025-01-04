@@ -7,7 +7,6 @@ function Info() {
     return (
         <div>
             <MediaHero
-                mediaType="image"
                 src="https://acecycleassets.vercel.app/about_1.jpg"
             >
                 <span className="text-2xl font-bold mb-4">Issue</span>
@@ -15,7 +14,6 @@ function Info() {
             </MediaHero>
             <h1 className='flex items-center justify-center text-center font-extrabold h-screen'>Description.</h1>
             <MediaHero
-                mediaType="image"
                 src="https://acecycleassets.vercel.app/about_1.jpg"
             >
                 <span className="text-2xl font-bold mb-4">Issue</span>
@@ -23,7 +21,6 @@ function Info() {
             </MediaHero>
             <h1 className='flex items-center justify-center text-center font-extrabold h-screen'>Description.</h1>
             <MediaHero
-                mediaType="image"
                 src="https://acecycleassets.vercel.app/about_1.jpg"
             >
                 <span className="text-2xl font-bold mb-4">Issue</span>

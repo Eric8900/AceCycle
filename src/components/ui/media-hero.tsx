@@ -1,22 +1,18 @@
 'use client';
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from "framer-motion";
 
 interface MediaHeroProps {
-  mediaType: string;
   src: string;
   children: React.ReactNode;
   height?: string;
 }
 
 export function MediaHero ({
-  mediaType = 'image',
   src,
   children,
   height = '200vh'
 }: MediaHeroProps) {
-  const [isPlaying, setIsPlaying] = useState<boolean>(true);
-  const videoRef = useRef<HTMLVideoElement | null>(null);
   const targetRef = useRef<HTMLDivElement | null>(null);
   
   const { scrollYProgress } = useScroll({
@@ -47,17 +43,6 @@ export function MediaHero ({
     [1, 1, 0]
   );
 
-  const togglePlay = () => {
-    if (mediaType === 'video' && videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
-
   return (
     <div className="relative" style={{ height }} ref={targetRef}>
       <motion.div
@@ -74,17 +59,7 @@ export function MediaHero ({
             width: "100%"
           }}
         >
-          {mediaType === 'video' ? (
-            <video
-              ref={videoRef}
-              className="h-full w-full object-cover"
-              autoPlay
-              muted
-              loop
-              playsInline
-              src={src}
-            />
-          ) : (
+          (
             <img
               className="h-full w-full object-cover"
               width={1920}
@@ -92,33 +67,13 @@ export function MediaHero ({
               src={src}
               alt="Hero background"
             />
-          )}
+          )
         </motion.div>
 
         <motion.div
           className="absolute inset-0"
           style={{ opacity }}
         />
-
-        {mediaType === 'video' && (
-          <div className="absolute top-0 right-0 p-4 z-50">
-            <button
-              onClick={togglePlay}
-              className="rounded-full bg-black bg-opacity-40 p-3 hover:bg-opacity-60 transition-all cursor-pointer"
-              aria-label={isPlaying ? 'Pause' : 'Play'}
-            >
-              {isPlaying ? (
-                <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
-                </svg>
-              ) : (
-                <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              )}
-            </button>
-          </div>
-        )}
 
         <motion.div
           style={{
