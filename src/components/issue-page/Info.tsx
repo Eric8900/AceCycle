@@ -25,8 +25,8 @@ function Info() {
                 <span className="text-2xl font-bold mb-4">Statistics</span>
                 <h1 className="md:text-7xl text-4xl font-extrabold mb-2 text-center">Tennis ball waste<br/>by the numbers.</h1>
             </MediaHero>
-            <h1 className='flex lg:flex-row flex-col justify-center font-extrabold mx-[3vh] sm:mx-[10vh] my-[5vh]'>
-                <div className='text-4xl lg:w-[50%] lg:mb-0 mb-[5vh] lg:mr-10'>
+            <h1 className='flex lg:flex-row flex-col justify-center font-extrabold mx-[3vh] sm:mx-[7vh] my-[5vh]'>
+                <div className='text-4xl lg:w-[50%] lg:mb-0 mb-[5vh] lg:mr-2'>
                     <Stats/>
                 </div>
                 <div className='text-neutral-500 text-xl font-normal lg:w-[50%]'>
