@@ -73,7 +73,6 @@ function Navbar() {
   }
 
   return (
-    // Rest of the component remains unchanged
     <div className="w-full flex lg:items-center lg:justify-center">
       {/* MOBILE */}
       <header className={`lg:hidden w-full ${isOpen ? "bg-white" : "bg-transparent"} py-4 px-8 z-[100]`}>
