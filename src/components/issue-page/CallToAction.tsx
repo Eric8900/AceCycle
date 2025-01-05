@@ -9,7 +9,7 @@ function CallToAction() {
                 <div className='h-[70vh] w-full lg:w-[50%] md:w-[70%] sm:w-[85%] bg-green-800 p-9'>
                     <div className='h-full flex flex-col justify-between'>
                         <div>
-                            <div className='xl:text-6xl sm:text-4xl text-2xl mb-3'>
+                            <div className='xl:text-6xl text-4xl mb-3'>
                                 Sustainability is key to AceCycle's mission
                             </div>
                             <a href='/about/'>
@@ -21,7 +21,7 @@ function CallToAction() {
                         <div>
                             <div className='w-full bg-white h-[2px] mb-2'></div>
                             <div className='xl:text-lg text-left mb-6'>Our Impact</div>
-                            <div className='xl:text-xl text-left'>From our local beginnings to our current global outreach, AceCycle has been committed to sustainability in tennis. We've kept more than 450,000 balls out of landfills, conducted multiple studies for improving the recycling efficiency of tennis balls, and repurposed them into meaningful second lives-from local tennis shops to animal shelters. With chapters in numerous states and countries, we show that environmental responsibility can be paired with community impact.</div>
+                            <div className='xl:text-xl sm:text-lg text-sm text-left'>From our local beginnings to our current global outreach, AceCycle has been committed to sustainability in tennis. We've kept more than 450,000 balls out of landfills, conducted multiple studies for improving the recycling efficiency of tennis balls, and repurposed them into meaningful second lives-from local tennis shops to animal shelters. With chapters in numerous states and countries, we show that environmental responsibility can be paired with community impact.</div>
                         </div>
                     </div>
                 </div>
