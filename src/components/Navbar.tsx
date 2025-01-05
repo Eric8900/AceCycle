@@ -91,10 +91,9 @@ function Navbar() {
           <div className="flex flex-col items-center gap-3 text-3xl font-light py-8">
             {[
               { href: "/", text: "Home" },
+              { href: "/issue/", text: "The Problem" },
               { href: "/#partners", text: "Partners" },
               { href: "/#research", text: "Research" },
-              { href: "/#gallery", text: "Gallery" },
-              { href: "/#about", text: "Mission" },
               { href: "/about/", text: "About" },
               { href: "/about/#team", text: "Our Team" },
               { href: "/#acecycleapp", text: "AceCycle App" },
@@ -128,10 +127,9 @@ function Navbar() {
           <NavigationMenuList className="gap-4">
             {[
               { href: "/", text: "Home" },
+              { href: "/issue/", text: "The Problem" },
               { href: "/#partners", text: "Partners" },
               { href: "/#research", text: "Research" },
-              { href: "/#gallery", text: "Gallery" },
-              { href: "/#about", text: "Mission" },
               { href: "/about/", text: "About" },
               { href: "/about/#team", text: "Our Team" },
               { href: "/#acecycleapp", text: "AceCycle App" },

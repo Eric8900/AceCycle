@@ -1,5 +1,4 @@
 import { ZoomingImage } from '@/components/ui/zooming-image'
-import { motion } from 'framer-motion'
 
 function CallToAction() {
     return (
@@ -10,40 +9,19 @@ function CallToAction() {
                 <div className='h-[70vh] w-full lg:w-[50%] md:w-[70%] sm:w-[85%] bg-green-800 p-9'>
                     <div className='h-full flex flex-col justify-between'>
                         <div>
-                            <div className='xl:text-6xl text-4xl mb-3'>
+                            <div className='xl:text-6xl sm:text-4xl text-2xl mb-3'>
                                 Sustainability is key to AceCycle's mission
                             </div>
                             <a href='/about/'>
-                                <motion.button
-                                    className={`relative xl:px-8 xl:py-4 px-6 py-4 rounded-lg overflow-hidden group`}
-                                    whileHover="hover"
-                                    initial="initial"
-                                >
-                                    <div
-                                        className={`absolute inset-0 bg-gradient-to-r from-emerald-800 to-green-600`}
-                                    />
-                                    <motion.div
-                                        className={`absolute inset-0 bg-gradient-to-r from-lime-500 to-emerald-800`}
-                                        initial={{ scale: 1.5, opacity: 0 }}
-                                        variants={{
-                                            hover: { scale: 1, opacity: 1 },
-                                            initial: { scale: 1.5, opacity: 0 }
-                                        }}
-                                        transition={{
-                                            duration: 0.3,
-                                            ease: "easeInOut"
-                                        }}
-                                    />
-                                    <span className="relative text-white font-semibold xl:text-xl">
-                                        Learn More
-                                    </span>
-                                </motion.button>
+                                <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-green-600 bg-[linear-gradient(110deg,#15803d,45%,#16a34a,55%,#15803d)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-offset-2 focus:ring-offset-slate-50">
+                                    Learn More
+                                </button>
                             </a>
                         </div>
                         <div>
                             <div className='w-full bg-white h-[2px] mb-2'></div>
                             <div className='xl:text-lg text-left mb-6'>Our Impact</div>
-                            <div className='xl:text-2xl text-left'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora autem alias iste, ab reprehenderit ea nostrum id eligendi nisi voluptatum doloribus repudiandae, repellendus esse similique aut nobis obcaecati saepe excepturi.</div>
+                            <div className='xl:text-xl text-left'>From our local beginnings to our current global outreach, AceCycle has been committed to sustainability in tennis. We've kept more than 450,000 balls out of landfills, conducted multiple studies for improving the recycling efficiency of tennis balls, and repurposed them into meaningful second lives-from local tennis shops to animal shelters. With chapters in numerous states and countries, we show that environmental responsibility can be paired with community impact.</div>
                         </div>
                     </div>
                 </div>

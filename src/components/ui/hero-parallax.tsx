@@ -108,13 +108,21 @@ export const Header = () => {
       <BlurIn delay={0.4} className="max-w-xl text-xl md:text-2xl font-light drop-shadow-2xl my-8 dark:text-neutral-200">
         We are an international non-profit founded in 2022 committed to recycling tennis balls globally.
       </BlurIn>
-      <BlurIn delay={0.8}>
+      <BlurIn delay={0.8} className="flex flex-row gap-10">
         <a
           className="inline-flex h-9 w-max items-center justify-center rounded-md"
           href="/about/"
         >
           <Button className="max-w-2xl rounded-xl text-xl md:text-3xl md:p-8 p-6 dark:text-neutral-200">
             Learn More
+          </Button>
+        </a>
+        <a
+          className="inline-flex h-9 w-max items-center justify-center rounded-md"
+          href="/issue/"
+        >
+          <Button variant={'outline'} className="max-w-2xl border-primary hover:text-white hover:bg-primary bg-transparent rounded-xl text-xl md:text-3xl md:p-8 p-6 dark:text-neutral-200">
+            The Problem
           </Button>
         </a>
       </BlurIn>

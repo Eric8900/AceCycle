@@ -40,7 +40,7 @@ export function MediaHero({
 
     const textY = useTransform(scrollYProgress,
         [0, 0.2, 0.8],
-        [200, 0, -1000],
+        [1000, 0, -300],
         { clamp: true }
     );
 
