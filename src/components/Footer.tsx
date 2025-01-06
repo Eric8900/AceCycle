@@ -5,6 +5,7 @@ import { useLocation } from 'react-router-dom';
 function Footer() {
   const links = [
     { href: "/", text: "Home" },
+    { href: "/issue/", text: "The Problem" },
     { href: "/#partners", text: "Partners" },
     { href: "/#research", text: "Research" },
     { href: "/#gallery", text: "Gallery" },
