@@ -8,8 +8,8 @@ function Stores() {
                 <p className="text-lg mb-8">
                     Manage tennis ball inventory and track usage with <b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">AceCycleManager</b>, coming soon.
                 </p>
-                <a href={'#'} className="">
-                    <button disabled className="bg-primary/40 hover:bg-prim text-white font-bold py-3 px-12 rounded-[10px] transition duration-300">
+                <a target="_blank" rel="noopener noreferrer" href={'https://github.com/Nishant27-2006/AceCycleManager'} className="">
+                    <button className="bg-primary hover:bg-green-500 text-white font-bold py-3 px-12 rounded-[10px] transition duration-300">
                         Learn More
                     </button>
                 </a>
