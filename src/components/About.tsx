@@ -52,7 +52,7 @@ export function About() {
               </b>
               App
             </BlurIn>
-            <Iphone15Pro className="size-[85%] sm:size-[65%] md:size-[45%] lg:size-[70%] drop-shadow-2xl" src="https://acecycleassets.vercel.app/acecycle_app.jpeg" />
+            <Iphone15Pro className="size-[85%] sm:size-[65%] md:size-[45%] lg:size-[70%] drop-shadow-2xl" src="https://acecycleassets.vercel.app/acecycle_app.png" />
           </div>
           <div className="flex flex-col justify-center items-center w-full text-center mt-32 lg:mt-0 lg:mx-10">
             <BlurIn margin={"-100px"} className="text-4xl sm:text-5xl text-center mb-10">
