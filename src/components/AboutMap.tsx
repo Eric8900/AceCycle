@@ -105,9 +105,9 @@ const AboutMap = () => {
             {/* International Locations Section */}
             <div className="w-full text-center mb-10">
                 <h2 className="text-3xl font-bold mb-4"><b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">International</b> Locations</h2>
-                <div className="flex justify-center space-x-8">
+                <div className="flex sm:flex-row flex-col justify-center sm:space-x-8">
                     {internationalLocations.map((location) => (
-                        <p key={location.name} className="text-xl font-semibold text-gray-700">{location.name}</p>
+                        <span key={location.name} className="text-xl font-semibold text-gray-700">{location.name}</span>
                     ))}
                 </div>
             </div>
