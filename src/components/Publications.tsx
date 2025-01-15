@@ -26,6 +26,7 @@ const publications: Publication[] = [
 const FeaturedPublications: React.FC = () => {
     return (
         <div className="container mx-auto px-4 py-8">
+            {/* Title */}
             <BlurIn
                 margin={"-100px"}
                 delay={0.4}

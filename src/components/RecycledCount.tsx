@@ -33,6 +33,7 @@ function RecycledCount() {
         viewport={{ once: true }}
         transition={{ duration: 1, delay: 0.5 }}
       >
+        {/* PARTNERS */}
         <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center items-center gap-8">
           {partnersData.map((partner: { href: string | undefined; imgSrc: string | undefined; alt: string | undefined; }) => (
             <a href={partner.href} target="_blank" rel="noopener noreferrer">
