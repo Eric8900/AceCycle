@@ -114,7 +114,7 @@ const content = [
 ];
 
 const numbersToSkip = [8, 9];
-const data = Array.from({ length: 23 })
+const data = Array.from({ length: 24 })
   .map((_, i) => i + 1)
   .filter(num => !numbersToSkip.includes(num))
   .map(num => ({
