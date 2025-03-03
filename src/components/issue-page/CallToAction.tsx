@@ -1,4 +1,6 @@
 import { ZoomingImage } from '@/components/ui/zooming-image'
+import { Button } from '../ui/button'
+import ShinyText from '../ui/shiny-text'
 
 function CallToAction() {
     return (
@@ -6,16 +8,17 @@ function CallToAction() {
             <ZoomingImage
                 src='https://acecycleassets.vercel.app/about_13.jpg'
             >
-                <div className='h-[70vh] w-full lg:w-[50%] md:w-[70%] sm:w-[85%] bg-green-800 p-9'>
+                <div className='rounded-xl h-[70vh] w-full lg:w-[50%] md:w-[70%] sm:w-[85%] bg-green-800 p-9'>
                     <div className='h-full flex flex-col justify-between'>
                         <div>
                             <div className='xl:text-6xl sm:text-4xl text-3xl mb-3'>
                                 Sustainability is key to AceCycle's mission
                             </div>
                             <a href='/about/'>
-                                <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-green-600 bg-[linear-gradient(110deg,#15803d,45%,#16a34a,55%,#15803d)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-offset-2 focus:ring-offset-slate-50">
-                                    Learn More
-                                </button>
+                                <Button
+                                    className='rounded-full p-5'>
+                                    <ShinyText text="Learn More" speed={3} className='' />
+                                </Button>
                             </a>
                         </div>
                         <div>
