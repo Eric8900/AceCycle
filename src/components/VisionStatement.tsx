@@ -2,7 +2,7 @@ function VisionStatement() {
 
     return (
       <>
-        <div className="absolute h-screen w-full text-center bg-[url(https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/36/2021/12/15160118/381723-tennis-court-wallpaper-top-free-tennis-court-background.jpg)]
+        <div className="absolute h-screen w-full text-center bg-[url(https://images.unsplash.com/photo-1448743133657-f67644da3008?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dGVubmlzJTIwY291cnRzfGVufDB8fDB8fHww)]
         lg:bg-fixed lg:bg-center lg:bg-no-repeat lg:bg-cover brightness-[0.4]"></div>
         <div className="flex flex-col justify-center h-screen w-full md:px-[20%] px-[5%]">
           <h1 className="text-white md:text-[4.5rem] text-[4rem] leading-[1] font-extrabold brightness-100 opacity-100">Vision Statement</h1>
