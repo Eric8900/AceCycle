@@ -21,7 +21,7 @@ function RecycledCount() {
         >
           <span className='bg-gradient-to-r from-lime-500 to-lime-600 bg-clip-text text-transparent'>
             {/* NUMBER OF BALLS RECYCLED */}
-            <NumberTicker value={500000} className='inline bg-gradient-to-r from-lime-500 to-lime-600 bg-clip-text text-transparent' />+
+            <NumberTicker value={510000} className='inline bg-gradient-to-r from-lime-500 to-lime-600 bg-clip-text text-transparent' />+
           </span>
         </motion.span>
       </div>
