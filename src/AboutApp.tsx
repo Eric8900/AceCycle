@@ -5,6 +5,7 @@ import AboutTeam from "./components/AboutTeam"
 import VisionStatement from "./components/VisionStatement"
 import AboutMap from "./components/AboutMap"
 import { BrowserRouter } from "react-router-dom"
+import AboutAlumni from "./components/AboutAlumni"
 
 function AboutApp() {
 
@@ -21,6 +22,7 @@ function AboutApp() {
       <div id="team" className="mt-[30vh]">
         <AboutTeam />
       </div>
+      <AboutAlumni/>
       <BrowserRouter>
         <Footer />
       </BrowserRouter>
