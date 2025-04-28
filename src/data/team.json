@@ -1,19 +1,25 @@
 [
     {
+        "name": "Allan Xu | Katy",
+        "position": "Executive Director | Co-Founder",
+        "linkedin": "https://app.utrsports.net/profiles/2617780/",
+        "image": "https://acecycleassets.vercel.app/Allan.jpeg"
+    },
+    {
         "name": "Nishant Gadde | Katy",
-        "position": "CEO",
+        "position": "Co-Founder",
         "linkedin": "https://app.utrsports.net/profiles/2846420",
         "image": "https://acecycleassets.vercel.app/Nishant.jpg"
     },
     {
         "name": "Eric Chen | Katy",
-        "position": "CTO | President of Katy, TX",
+        "position": "Co-Founder",
         "linkedin": "https://linkedin.com/in/echen890",
         "image": "https://acecycleassets.vercel.app/Eric.jpeg"
     },
     {
         "name": "Ning Yu | Katy",
-        "position": "Co-President",
+        "position": "Co-Founder",
         "linkedin": "https://app.utrsports.net/profiles/874168",
         "image": "https://acecycleassets.vercel.app/Ning.jpeg"
     },
@@ -64,12 +70,6 @@
         "position": "Vice President | President of Sugar Land, TX",
         "linkedin": "https://app.utrsports.net/profiles/874167",
         "image": "https://acecycleassets.vercel.app/Pratik.jpeg"
-    },
-    {
-        "name": "Allan Xu | Katy",
-        "position": "Co-President | Co-Founder",
-        "linkedin": "https://app.utrsports.net/profiles/2617780/",
-        "image": "https://acecycleassets.vercel.app/Allan.jpeg"
     },
     {
         "name": "Sibi Raja | Austin",
