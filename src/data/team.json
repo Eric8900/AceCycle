@@ -7,19 +7,13 @@
     },
     {
         "name": "Nishant Gadde | Katy",
-        "position": "Co-Founder",
+        "position": "Alumni | Co-Founder",
         "linkedin": "https://app.utrsports.net/profiles/2846420",
         "image": "https://acecycleassets.vercel.app/Nishant.jpg"
     },
     {
-        "name": "Eric Chen | Katy",
-        "position": "Co-Founder",
-        "linkedin": "https://linkedin.com/in/echen890",
-        "image": "https://acecycleassets.vercel.app/Eric.jpeg"
-    },
-    {
         "name": "Ning Yu | Katy",
-        "position": "Co-Founder",
+        "position": "Alumni | Co-Founder",
         "linkedin": "https://app.utrsports.net/profiles/874168",
         "image": "https://acecycleassets.vercel.app/Ning.jpeg"
     },
@@ -112,6 +106,12 @@
         "position": "Mountain House, California Representative",
         "linkedin": "https://app.utrsports.net/",
         "image": "https://acecycleassets.vercel.app/aditya_punati.jpeg"
+    },
+    {
+        "name": "Eric Chen | Katy",
+        "position": "Alumni | Co-Founder",
+        "linkedin": "https://linkedin.com/in/echen890",
+        "image": "https://acecycleassets.vercel.app/Eric.jpeg"
     },
     {
         "name": "Rohan Phukan | North Carolina",
