@@ -17,7 +17,7 @@ const publications: Publication[] = [
     },
     {
         id: '2',
-        title: 'AceCycleManager: Tool for stores to manage tennis ball inventory, usage, and carbon emissions',
+        title: 'Solace: Tool for stores to manage tennis ball inventory, usage, and carbon emissions',
         imageUrl: 'https://github.com/Nishant27-2006/AceCycleManager/raw/main/homepage.png',
         pdfUrl: 'https://github.com/Nishant27-2006/AceCycleManager',
     },
