@@ -8,7 +8,7 @@ function Footer() {
     { href: "/issue/", text: "The Problem" },
     { href: "/#partners", text: "Partners" },
     { href: "/#research", text: "Research" },
-    { href: "/#gallery", text: "Gallery" },
+    { href: "/awards/", text: "Awards" },
     { href: "/#about", text: "Mission" },
     { href: "/about/", text: "About" },
     { href: "/about/#team", text: "Our Team" },

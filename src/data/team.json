@@ -1,5 +1,4 @@
 [
-    
     {
         "name": "Ryan Yin",
         "position": "Executive Director",
@@ -8,19 +7,19 @@
     },
     {
         "name": "Allan Xu | Katy",
-        "position": "Alumni | Co-Founder",
+        "position": "Co-Founder",
         "linkedin": "https://app.utrsports.net/profiles/2617780/",
         "image": "https://acecycleassets.vercel.app/Allan.jpeg"
     },
     {
         "name": "Nishant Gadde | Katy",
-        "position": "Alumni | Co-Founder",
+        "position": "Co-Founder",
         "linkedin": "https://app.utrsports.net/profiles/2846420",
         "image": "https://acecycleassets.vercel.app/Nishant.jpg"
     },
     {
         "name": "Ning Yu | Katy",
-        "position": "Alumni | Co-Founder",
+        "position": "Co-Founder",
         "linkedin": "https://app.utrsports.net/profiles/874168",
         "image": "https://acecycleassets.vercel.app/Ning.jpeg"
     },
@@ -47,12 +46,6 @@
         "position": "CFO, President of Philadelphia, Pennsylvania",
         "linkedin": "https://app.utrsports.net/",
         "image": "https://acecycleassets.vercel.app/Lalit.jpg"
-    },
-    {
-        "name": "Gabriel Segubiense | Sugar Land",
-        "position": "Chief Medical Officer, President of Sugar Land, TX",
-        "linkedin": "https://app.utrsports.net/profiles/1335997",
-        "image": "https://acecycleassets.vercel.app/Gabriel.jpeg"
     },
     {
         "name": "Sibi Raja | Austin",
@@ -98,7 +91,7 @@
     },
     {
         "name": "Nithish Thirumavalavan | Orlando",
-        "position": "Chief Health Officer, President of Orlando, FL",
+        "position": "President of Orlando, FL",
         "linkedin": "https://app.utrsports.net/",
         "image": "https://acecycleassets.vercel.app/Nithish.jpeg"
     },
@@ -116,32 +109,8 @@
     },
     {
         "name": "Eric Chen | Katy",
-        "position": "Alumni | Co-Founder",
+        "position": "Co-Founder",
         "linkedin": "https://linkedin.com/",
         "image": "https://acecycleassets.vercel.app/Eric.jpeg"
-    },
-    {
-        "name": "Rohan Phukan | North Carolina",
-        "position": "President of Charlotte, NC and Indian Land, SC",
-        "linkedin": "https://app.utrsports.net/",
-        "image": "https://t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
-    },
-    {
-        "name": "Tanay Jayamanchari | Midland, Michigan",
-        "position": "President of Midland, Michigan",
-        "linkedin": "https://app.utrsports.net/",
-        "image": "https://t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
-    },
-    {
-        "name": "Aaditiya Jagannathan | Virginia, Maryland",
-        "position": "Representative of TennisNow",
-        "linkedin": "https://app.utrsports.net/",
-        "image": "https://t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
-    },
-    {
-        "name": "Arshan | Pakistan",
-        "position": "President of Pakistan and International Relations",
-        "linkedin": "https://app.utrsports.net/",
-        "image": "https://t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
     }
 ]

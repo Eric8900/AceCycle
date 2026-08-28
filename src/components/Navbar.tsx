@@ -21,7 +21,7 @@ function useWindowSize() {
   return windowSize;
 }
 
-function Navbar() {
+function Navbar({ variant = 'overlay' }: { variant?: 'overlay' | 'solid' }) {
   const [isOpen, setIsOpen] = useState(false)
   const location = useLocation();
   const mobileHeaderHeight = useWindowSize().height;
@@ -75,7 +75,7 @@ function Navbar() {
   return (
     <div className="w-full flex lg:items-center lg:justify-center">
       {/* MOBILE */}
-      <header className={`lg:hidden w-full ${isOpen ? "bg-white" : "bg-transparent"} py-4 px-8 z-[100]`}>
+      <header className={`lg:hidden w-full ${isOpen || variant === 'solid' ? "bg-white" : "bg-transparent"} py-4 px-8 z-[100]`}>
         <div className="flex items-center justify-between h-20 pr-4">
           <a href="/">
             <img className="h-16 w-18" src="/AceCycleLogo.png" alt="AceCycle" />
@@ -93,6 +93,7 @@ function Navbar() {
               { href: "/issue/", text: "The Problem" },
               { href: "/#partners", text: "Partners" },
               { href: "/#research", text: "Research" },
+              { href: "/awards/", text: "Awards" },
               { href: "/about/", text: "About" },
               { href: "/about/#team", text: "Our Team" },
               { href: "/#acecycleapp", text: "AceCycle App" },
@@ -117,7 +118,7 @@ function Navbar() {
         </nav>
       </header>
       {/* LARGE SCREENS */}
-      <header className="hidden absolute mt-[15%] lg:flex m-6 justify-between w-full rounded-2xl backdrop-blur-sm px-4 md:px-16 z-[100]">
+      <header className={`hidden lg:flex justify-between w-full backdrop-blur-sm px-4 md:px-16 z-[100] ${variant === 'solid' ? 'relative border-b border-slate-200/70 bg-white/90 py-1' : 'absolute mt-[15%] m-6 rounded-2xl'}`}>
         <a className="mr-6" href="/">
           <img className='h-32 w-36' src='/AceCycleLogo.png' />
           <span className="sr-only">AceCycle</span>
@@ -129,14 +130,14 @@ function Navbar() {
               { href: "/issue/", text: "The Problem" },
               { href: "/#partners", text: "Partners" },
               { href: "/#research", text: "Research" },
+              { href: "/awards/", text: "Awards" },
               { href: "/about/", text: "About" },
               { href: "/about/#team", text: "Our Team" },
               { href: "/#acecycleapp", text: "AceCycle App" },
               { href: "/contact/", text: "Contact Us" },
             ].map((link) => (
-              <NavigationMenuLink asChild>
+              <NavigationMenuLink asChild key={link.href}>
                 <a
-                  key={link.href}
                   href={link.href}
                   onClick={(e) => handleLinkClick(e, link.href)}
                   className="group inline-flex h-9 w-max items-center justify-center bg-transparent py-2 text-lg font-light transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full"
@@ -145,10 +146,9 @@ function Navbar() {
                 </a>
               </NavigationMenuLink>
             ))}
-            <NavigationMenuLink asChild>
+            <NavigationMenuLink asChild key="/about/#startchapter">
               <a
                 href="/about/#startchapter"
-                key="/about/#startchapter"
                 onClick={(e) => handleLinkClick(e, "/about/#startchapter")}
                 className="group inline-flex h-9 w-max items-center justify-center bg-transparent py-2 text-lg font-bold bg-gradient-to-r from-lime-600 to-lime-700 bg-clip-text text-transparent transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full"
               >

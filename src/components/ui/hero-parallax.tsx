@@ -106,7 +106,7 @@ export const Header = () => {
         Reduce, Reuse, <b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">AceCycle</b>
       </BlurIn>
       <BlurIn delay={0.4} className="max-w-xl text-xl md:text-2xl font-light drop-shadow-2xl my-8 dark:text-neutral-200">
-        We are an international non-profit founded in 2022 committed to recycling tennis balls globally.
+        We are a national non-profit founded in 2022 committed to recycling tennis balls.
       </BlurIn>
       <BlurIn delay={0.8} className="flex flex-row gap-10">
         <a
