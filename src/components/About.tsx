@@ -114,11 +114,17 @@ const content = [
 ];
 
 const numbersToSkip = [8, 9, 1,2,3,4,5,7,10,13,15,17,18,24];
-const data = Array.from({ length: 24 })
-  .map((_, i) => i + 1)
-  .filter(num => !numbersToSkip.includes(num))
-  .map(num => ({
+const data = [
+  {
     title: "Tennis Balls",
-    src: `https://acecycleassets.vercel.app/about_${num}.jpg`
-  }))
-  .sort(() => Math.random() - 0.5);
+    src: "/collin-county-donation.jpg"
+  },
+  ...Array.from({ length: 24 })
+    .map((_, i) => i + 1)
+    .filter(num => !numbersToSkip.includes(num))
+    .map(num => ({
+      title: "Tennis Balls",
+      src: `https://acecycleassets.vercel.app/about_${num}.jpg`
+    }))
+    .sort(() => Math.random() - 0.5)
+];
