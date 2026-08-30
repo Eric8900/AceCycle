@@ -113,7 +113,7 @@ const content = [
   },
 ];
 
-const numbersToSkip = [8, 9, 1,2,3,4,5,7,10,13,15,17,18,24];
+const numbersToSkip = [8, 9, 1,2,3,4,5,7,10,13,15,17,18,21,24];
 const data = [
   {
     title: "Tennis Balls",
