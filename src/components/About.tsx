@@ -113,11 +113,23 @@ const content = [
   },
 ];
 
-const numbersToSkip = [8, 9, 1,2,3,4,5,7,10,13,15,17,18,21,24];
+const numbersToSkip = [8, 9, 1,2,3,4,5,7,10,13,14,15,16,17,18,19,20,21,24];
 const data = [
   {
     title: "Tennis Balls",
     src: "/collin-county-donation.jpg"
+  },
+  {
+    title: "Tennis Balls",
+    src: "/collin-county-donation-2.jpg"
+  },
+  {
+    title: "Tennis Balls",
+    src: "/petco-donation-storefront.jpg"
+  },
+  {
+    title: "Tennis Balls",
+    src: "/petco-donation-bag.jpg"
   },
   ...Array.from({ length: 24 })
     .map((_, i) => i + 1)
