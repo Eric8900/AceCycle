@@ -37,13 +37,6 @@ const cities = [
     { name: "Kenosha, WI", coordinates: [-87.827642, 42.579057] }
 ];
 
-const internationalLocations = [
-    { name: "Vancouver, Canada" },
-    { name: "London, UK" },
-    { name: "India" },
-    { name: "Pakistan" }
-];
-
 const states = [
     "Texas", "Georgia", "Florida", "North Carolina", "New Jersey", "New York", "Connecticut", "Illinois", "Virginia", "California", "South Carolina", "Kentucky", "Missouri", "Maryland", "Indiana", "Pennsylvania", "Michigan", "Delaware", "Wisconsin"
 ];
@@ -101,15 +94,6 @@ const AboutMap = () => {
             <div className='flex flex-col justify-center items-center my-32 gap-5'>
                 <h1 className="text-gray-800 text-7xl font-extrabold text-center">Our <b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">Chapters</b></h1>
                 <p className="opacity-80 text-gray-700 text-4xl font-light text-center">Recycling balls on the<FlipWords words={words} className='font-extrabold text-[#84cc16]'/>level</p>
-            </div>
-            {/* International Locations Section */}
-            <div className="w-full text-center mb-10">
-                <h2 className="text-3xl font-bold mb-4"><b className="bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">International</b> Locations</h2>
-                <div className="flex sm:flex-row flex-col justify-center sm:space-x-8">
-                    {internationalLocations.map((location) => (
-                        <span key={location.name} className="text-xl font-semibold text-gray-700">{location.name}</span>
-                    ))}
-                </div>
             </div>
             {/* US Locations Section */}
             <div className="w-full text-center mb-10">
