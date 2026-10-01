@@ -93,8 +93,7 @@ function Footer() {
             </div>
           </div>
 
-          <div className="mt-8 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-            <p className="text-sm text-gray-600">Made with ❤️️ by Eric</p>
+          <div className="mt-8 pt-8 border-t border-gray-200 flex justify-center md:justify-end items-center text-center md:text-left">
             <p className="text-sm text-gray-600">© {new Date().getFullYear()} AceCycle. All rights reserved.</p>
           </div>
         </div>
