@@ -143,6 +143,14 @@ const data = [
     title: "Tennis Balls",
     src: "/petco-donation-3.jpg"
   },
+  {
+    title: "Tennis Balls",
+    src: "/ohio-collection-1.jpg"
+  },
+  {
+    title: "Tennis Balls",
+    src: "/ohio-collection-2.jpg"
+  },
   ...Array.from({ length: 24 })
     .map((_, i) => i + 1)
     .filter(num => !numbersToSkip.includes(num))
